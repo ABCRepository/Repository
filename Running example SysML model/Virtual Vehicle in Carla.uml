@@ -1,0 +1,637 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:Blocks="http://www.eclipse.org/papyrus/1.4/SysML/Blocks" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:testing="http:///schemas/testing/_Rg9V4OtOEe2Q9rbG-WAokA/12" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/testing/_Rg9V4OtOEe2Q9rbG-WAokA/12 ../SysMLEvolver/SysMLEvolver.testing.profile.uml#_Rg_yIOtOEe2Q9rbG-WAokA">
+  <uml:Model xmi:id="_mzStEMPPEeyd3c2n8E7mgg" name="RootElement">
+    <packagedElement xmi:type="uml:Class" xmi:id="_sM_8sMPPEeyd3c2n8E7mgg" name="Virtual Vehicle in Carla" classifierBehavior="_sFtzgMPQEeyd3c2n8E7mgg">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_bNm0oMPVEeyd3c2n8E7mgg" name="speed">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_JYTOEOkcEe2wA73EzY-VEQ" name="steer">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_Y7u2YOmCEe2krLOgLClFeg" name="laneId">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_2-WhMOmdEe2krLOgLClFeg" name="hasObstacle">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_7B4BAOmdEe2krLOgLClFeg" name="hasJunction">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_AjHcAOmeEe2krLOgLClFeg" name="multiLaneGroupId">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_PWFhEOmeEe2krLOgLClFeg" name="risk">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+      </ownedAttribute>
+      <ownedBehavior xmi:type="uml:StateMachine" xmi:id="_sFtzgMPQEeyd3c2n8E7mgg" name="Driving through a block">
+        <ownedRule xmi:type="uml:Constraint" xmi:id="_FkMjgOmOEe2krLOgLClFeg">
+          <specification xmi:type="uml:LiteralString" xmi:id="_FkXioOmOEe2krLOgLClFeg" name="constraintSpec" value="self.current.multiLaneGroupId = self.previous.multiLaneGroupId &#xD;&#xA;and self.hasObstacle = false and self.hasJunction = false"/>
+        </ownedRule>
+        <region xmi:type="uml:Region" xmi:id="_ub5nwMPQEeyd3c2n8E7mgg" name="State Machine Region">
+          <transition xmi:type="uml:Transition" xmi:id="_Zo8gwMPREeyd3c2n8E7mgg" source="_Krg4IMPREeyd3c2n8E7mgg" target="_NVZEcMPREeyd3c2n8E7mgg">
+            <ownedRule xmi:type="uml:Constraint" xmi:id="_U5-wUMqtEeyBxZM8hgMRvg">
+              <specification xmi:type="uml:LiteralString" xmi:id="_U5-wUcqtEeyBxZM8hgMRvg" value="thr > 0 and thr &lt; 1"/>
+            </ownedRule>
+            <trigger xmi:type="uml:Trigger" xmi:id="_RslnQMqtEeyBxZM8hgMRvg" event="_RghhMMqtEeyBxZM8hgMRvg"/>
+          </transition>
+          <transition xmi:type="uml:Transition" xmi:id="_vVUtoMPREeyd3c2n8E7mgg" source="_lkrS8MPREeyd3c2n8E7mgg">
+            <trigger xmi:type="uml:Trigger" xmi:id="_ugB9QOgtEe2nmrujHz9QnA" event="_uO8NQOgtEe2nmrujHz9QnA"/>
+          </transition>
+          <transition xmi:type="uml:Transition" xmi:id="_50BeYMqmEeyBxZM8hgMRvg">
+            <trigger xmi:type="uml:Trigger" xmi:id="_yHqyUOgtEe2nmrujHz9QnA" event="_xvDeAOgtEe2nmrujHz9QnA"/>
+          </transition>
+          <transition xmi:type="uml:Transition" xmi:id="_uwjqQAG3Ee2CoqFL20WK_A" source="_NVZEcMPREeyd3c2n8E7mgg">
+            <trigger xmi:type="uml:Trigger" xmi:id="_P5cIIOdhEe24HKfGzk6RFw" event="_PwPI0OdhEe24HKfGzk6RFw"/>
+          </transition>
+          <transition xmi:type="uml:Transition" xmi:id="_9ceI8EngEe2ty_1GfTsR1w" source="_MENOsAGxEe2CoqFL20WK_A" target="_Krg4IMPREeyd3c2n8E7mgg"/>
+          <transition xmi:type="uml:Transition" xmi:id="_NocP0HqKEe20GIdTtabFMg" target="_lkrS8MPREeyd3c2n8E7mgg">
+            <trigger xmi:type="uml:Trigger" xmi:id="_CXlWgOguEe2nmrujHz9QnA" event="_CJ7VAOguEe2nmrujHz9QnA"/>
+          </transition>
+          <transition xmi:type="uml:Transition" xmi:id="_OL9EsOmoEe23Ku9-c1Ae_A" source="_NVZEcMPREeyd3c2n8E7mgg" target="_lkrS8MPREeyd3c2n8E7mgg">
+            <trigger xmi:type="uml:Trigger" xmi:id="_X_FLoOmoEe23Ku9-c1Ae_A" event="_X0JG8OmoEe23Ku9-c1Ae_A"/>
+          </transition>
+          <transition xmi:type="uml:Transition" xmi:id="_hmcugOmoEe23Ku9-c1Ae_A" source="_lkrS8MPREeyd3c2n8E7mgg" target="_NVZEcMPREeyd3c2n8E7mgg">
+            <trigger xmi:type="uml:Trigger" xmi:id="_lZoFMOmoEe23Ku9-c1Ae_A" event="_lPTrkOmoEe23Ku9-c1Ae_A"/>
+          </transition>
+          <subvertex xmi:type="uml:State" xmi:id="_Krg4IMPREeyd3c2n8E7mgg" name="Idle">
+            <ownedRule xmi:type="uml:Constraint" xmi:id="_GDldYOkOEe2LEqRYFPPkYQ">
+              <specification xmi:type="uml:LiteralString" xmi:id="_GDq88OkOEe2LEqRYFPPkYQ" name="constraintSpec" value="self.current.speed = 0"/>
+            </ownedRule>
+          </subvertex>
+          <subvertex xmi:type="uml:State" xmi:id="_NVZEcMPREeyd3c2n8E7mgg" name="Maintaining Lane" stateInvariant="_cAjlwKzbEe2qOfWPnpbkFA">
+            <ownedRule xmi:type="uml:Constraint" xmi:id="_2w-4QMqzEeyBxZM8hgMRvg">
+              <specification xmi:type="uml:LiteralString" xmi:id="_nLiX8Mq0EeyBxZM8hgMRvg" value="speed > 0 and speed &lt; 30 and curLaneId = nextLaneId and isObstacle = false and isJunction = false"/>
+            </ownedRule>
+            <ownedRule xmi:type="uml:Constraint" xmi:id="_cAjlwKzbEe2qOfWPnpbkFA">
+              <specification xmi:type="uml:LiteralString" xmi:id="_cAjlwazbEe2qOfWPnpbkFA" value="curLaneId = nextLaneId and isObstacle = false and isJunction = false"/>
+            </ownedRule>
+            <ownedRule xmi:type="uml:Constraint" xmi:id="_6Qpf8OdOEe24HKfGzk6RFw">
+              <specification xmi:type="uml:LiteralString" xmi:id="_6Qpf8edOEe24HKfGzk6RFw" name="constraintSpec" value="self.current.laneId = self.previous.laneId "/>
+            </ownedRule>
+            <region xmi:type="uml:Region" xmi:id="_xn40IMqKEeyDGbzl89oc0w" name="Maintaining Lane Region">
+              <ownedRule xmi:type="uml:Constraint" xmi:id="_l_RRcOdOEe24HKfGzk6RFw">
+                <specification xmi:type="uml:LiteralString" xmi:id="_l_R4gOdOEe24HKfGzk6RFw" name="constraintSpec" value="self.current.speed > 0 &#xD;&#xA;and self.current.steer &lt; 0"/>
+              </ownedRule>
+              <transition xmi:type="uml:Transition" xmi:id="_fJdfIN_BEeysC_5v9OfFmQ" source="_xn-TsMqKEeyDGbzl89oc0w" target="_CfGMcN_BEeysC_5v9OfFmQ"/>
+              <transition xmi:type="uml:Transition" xmi:id="__bbpULanEe2MHYx4f70mvQ" source="_CfGMcN_BEeysC_5v9OfFmQ" target="_zN8L8MqKEeyDGbzl89oc0w">
+                <ownedRule xmi:type="uml:Constraint" xmi:id="_RhXT8LaoEe2MHYx4f70mvQ">
+                  <specification xmi:type="uml:LiteralString" xmi:id="_RhXT8baoEe2MHYx4f70mvQ" value="thr > 0 and thr &lt; 1"/>
+                </ownedRule>
+                <trigger xmi:type="uml:Trigger" xmi:id="_MzB8kLaoEe2MHYx4f70mvQ" event="_MbZfsLaoEe2MHYx4f70mvQ"/>
+              </transition>
+              <transition xmi:type="uml:Transition" xmi:id="_AH6U0LaoEe2MHYx4f70mvQ" source="_CfGMcN_BEeysC_5v9OfFmQ" target="_66lukMqKEeyDGbzl89oc0w">
+                <ownedRule xmi:type="uml:Constraint" xmi:id="_qbP3QLarEe2MHYx4f70mvQ">
+                  <specification xmi:type="uml:LiteralString" xmi:id="_qbP3QbarEe2MHYx4f70mvQ" value="brake > 0 and brake &lt; 1"/>
+                </ownedRule>
+                <trigger xmi:type="uml:Trigger" xmi:id="_1TvvML4cEe2289CgWibYoA" event="_1I2t0L4cEe2289CgWibYoA"/>
+              </transition>
+              <transition xmi:type="uml:Transition" xmi:id="_8DIMkLauEe2MHYx4f70mvQ" source="_zN8L8MqKEeyDGbzl89oc0w" target="_66lukMqKEeyDGbzl89oc0w">
+                <ownedRule xmi:type="uml:Constraint" xmi:id="_TWb7ALavEe2MHYx4f70mvQ">
+                  <specification xmi:type="uml:LiteralString" xmi:id="_TWb7AbavEe2MHYx4f70mvQ" value="brake > 0 and brake &lt; 1"/>
+                </ownedRule>
+                <trigger xmi:type="uml:Trigger" xmi:id="_-AmKkL4cEe2289CgWibYoA" event="_92LqUL4cEe2289CgWibYoA"/>
+              </transition>
+              <transition xmi:type="uml:Transition" xmi:id="_8rgbMLauEe2MHYx4f70mvQ" source="_66lukMqKEeyDGbzl89oc0w" target="_zN8L8MqKEeyDGbzl89oc0w">
+                <ownedRule xmi:type="uml:Constraint" xmi:id="_LBXGcLavEe2MHYx4f70mvQ">
+                  <specification xmi:type="uml:LiteralString" xmi:id="_LBXGcbavEe2MHYx4f70mvQ" value="thr > 0 and thr &lt; 1"/>
+                </ownedRule>
+                <trigger xmi:type="uml:Trigger" xmi:id="_51KE4L4cEe2289CgWibYoA" event="_5o05EL4cEe2289CgWibYoA"/>
+              </transition>
+              <transition xmi:type="uml:Transition" xmi:id="_AO6wMLayEe2MHYx4f70mvQ" source="_66lukMqKEeyDGbzl89oc0w" target="_66lukMqKEeyDGbzl89oc0w">
+                <ownedRule xmi:type="uml:Constraint" xmi:id="_MhzeILayEe2MHYx4f70mvQ">
+                  <specification xmi:type="uml:LiteralString" xmi:id="_MhzeIbayEe2MHYx4f70mvQ" value="brake > 0 and brake &lt; 1"/>
+                </ownedRule>
+                <trigger xmi:type="uml:Trigger" xmi:id="_Y7Ry4L4eEe2289CgWibYoA" event="_Yuy2EL4eEe2289CgWibYoA"/>
+              </transition>
+              <transition xmi:type="uml:Transition" xmi:id="_FK9kYLz9Ee2Vu44zAWD7uQ" source="_zN8L8MqKEeyDGbzl89oc0w" target="_UU9e0Lz8Ee2Vu44zAWD7uQ">
+                <ownedRule xmi:type="uml:Constraint" xmi:id="_Ur-bMLz9Ee2Vu44zAWD7uQ">
+                  <specification xmi:type="uml:LiteralString" xmi:id="_Ur-bMbz9Ee2Vu44zAWD7uQ" value="left > 0 and left &lt; 1 and thr > 0 and thr &lt; 1"/>
+                </ownedRule>
+                <trigger xmi:type="uml:Trigger" xmi:id="_NBCIwLz9Ee2Vu44zAWD7uQ" event="_MwRI4Lz9Ee2Vu44zAWD7uQ"/>
+              </transition>
+              <transition xmi:type="uml:Transition" xmi:id="_eBBfALz9Ee2Vu44zAWD7uQ" source="_66lukMqKEeyDGbzl89oc0w" target="_XlgpkLz8Ee2Vu44zAWD7uQ">
+                <ownedRule xmi:type="uml:Constraint" xmi:id="_xXtm4Lz9Ee2Vu44zAWD7uQ">
+                  <specification xmi:type="uml:LiteralString" xmi:id="_xXtm4bz9Ee2Vu44zAWD7uQ" value="right > 0 and right &lt; 1 and thr > 0 and thr &lt; 1"/>
+                </ownedRule>
+                <trigger xmi:type="uml:Trigger" xmi:id="_nskXQLz9Ee2Vu44zAWD7uQ" event="_nexy4Lz9Ee2Vu44zAWD7uQ"/>
+              </transition>
+              <transition xmi:type="uml:Transition" xmi:id="_0razULz9Ee2Vu44zAWD7uQ" source="_UU9e0Lz8Ee2Vu44zAWD7uQ" target="_UU9e0Lz8Ee2Vu44zAWD7uQ">
+                <ownedRule xmi:type="uml:Constraint" xmi:id="_GeHYQL1TEe2X2_b1K7jgYg">
+                  <specification xmi:type="uml:LiteralString" xmi:id="_GeHYQb1TEe2X2_b1K7jgYg" value="left > 0 and left &lt; 1 and thr > 0 and thr &lt; 1"/>
+                </ownedRule>
+                <trigger xmi:type="uml:Trigger" xmi:id="_-8ASULz9Ee2Vu44zAWD7uQ" event="_-v7lMLz9Ee2Vu44zAWD7uQ"/>
+              </transition>
+              <transition xmi:type="uml:Transition" xmi:id="_1WqvwLz9Ee2Vu44zAWD7uQ" source="_XlgpkLz8Ee2Vu44zAWD7uQ" target="_XlgpkLz8Ee2Vu44zAWD7uQ">
+                <ownedRule xmi:type="uml:Constraint" xmi:id="_KFQeEL1TEe2X2_b1K7jgYg">
+                  <specification xmi:type="uml:LiteralString" xmi:id="_KFQeEb1TEe2X2_b1K7jgYg" value="right > 0 and right &lt; 1 and thr > 0 and thr &lt; 1"/>
+                </ownedRule>
+                <trigger xmi:type="uml:Trigger" xmi:id="_CWifgLz-Ee2Vu44zAWD7uQ" event="_CHRUcLz-Ee2Vu44zAWD7uQ"/>
+              </transition>
+              <transition xmi:type="uml:Transition" xmi:id="_l7bUULz-Ee2Vu44zAWD7uQ" source="_UU9e0Lz8Ee2Vu44zAWD7uQ" target="_zN8L8MqKEeyDGbzl89oc0w">
+                <ownedRule xmi:type="uml:Constraint" xmi:id="_6b4goLz-Ee2Vu44zAWD7uQ">
+                  <specification xmi:type="uml:LiteralString" xmi:id="_6b4gobz-Ee2Vu44zAWD7uQ" value="thr > 0 and thr &lt; 1 "/>
+                </ownedRule>
+                <trigger xmi:type="uml:Trigger" xmi:id="_31584Lz-Ee2Vu44zAWD7uQ" event="_3nmbILz-Ee2Vu44zAWD7uQ"/>
+              </transition>
+              <transition xmi:type="uml:Transition" xmi:id="_VmPN8L1TEe2X2_b1K7jgYg" source="_UU9e0Lz8Ee2Vu44zAWD7uQ" target="_XlgpkLz8Ee2Vu44zAWD7uQ">
+                <ownedRule xmi:type="uml:Constraint" xmi:id="_dnXLwL1TEe2X2_b1K7jgYg">
+                  <specification xmi:type="uml:LiteralString" xmi:id="_dnXLwb1TEe2X2_b1K7jgYg" value="right > 0 and right &lt; 1 and thr > 0 and thr &lt; 1"/>
+                </ownedRule>
+                <trigger xmi:type="uml:Trigger" xmi:id="_ZhuMEL1TEe2X2_b1K7jgYg" event="_ZTvacL1TEe2X2_b1K7jgYg"/>
+              </transition>
+              <transition xmi:type="uml:Transition" xmi:id="_nAooQL1TEe2X2_b1K7jgYg" source="_XlgpkLz8Ee2Vu44zAWD7uQ" target="_66lukMqKEeyDGbzl89oc0w">
+                <ownedRule xmi:type="uml:Constraint" xmi:id="_tGmg8L1TEe2X2_b1K7jgYg">
+                  <specification xmi:type="uml:LiteralString" xmi:id="_tGmg8b1TEe2X2_b1K7jgYg" value="brake > 0 and brake &lt; 1"/>
+                </ownedRule>
+                <trigger xmi:type="uml:Trigger" xmi:id="_qXQl0L1TEe2X2_b1K7jgYg" event="_qL31ML1TEe2X2_b1K7jgYg"/>
+              </transition>
+              <transition xmi:type="uml:Transition" xmi:id="_4WGfQL1TEe2X2_b1K7jgYg" source="_XlgpkLz8Ee2Vu44zAWD7uQ" target="_UU9e0Lz8Ee2Vu44zAWD7uQ">
+                <ownedRule xmi:type="uml:Constraint" xmi:id="_HNsloL1UEe2X2_b1K7jgYg">
+                  <specification xmi:type="uml:LiteralString" xmi:id="_HNslob1UEe2X2_b1K7jgYg" value="left > 0 and left &lt; 1 and thr > 0 and thr &lt; 1"/>
+                </ownedRule>
+                <trigger xmi:type="uml:Trigger" xmi:id="_AQuzgL1UEe2X2_b1K7jgYg" event="_ADFZEL1UEe2X2_b1K7jgYg"/>
+              </transition>
+              <transition xmi:type="uml:Transition" xmi:id="_sNdDoL4dEe2289CgWibYoA" source="_zN8L8MqKEeyDGbzl89oc0w" target="_zN8L8MqKEeyDGbzl89oc0w">
+                <ownedRule xmi:type="uml:Constraint" xmi:id="_1kJtQL4dEe2289CgWibYoA">
+                  <specification xmi:type="uml:LiteralString" xmi:id="_1kJtQb4dEe2289CgWibYoA" value="thr > 0 and thr &lt; 1"/>
+                </ownedRule>
+                <trigger xmi:type="uml:Trigger" xmi:id="_zLU0sL4dEe2289CgWibYoA" event="_y8aO8L4dEe2289CgWibYoA"/>
+              </transition>
+              <transition xmi:type="uml:Transition" xmi:id="_DYSlsOkXEe2AMfGhoxL_ZQ" source="_zN8L8MqKEeyDGbzl89oc0w" target="_5qV5sOkWEe2AMfGhoxL_ZQ">
+                <trigger xmi:type="uml:Trigger" xmi:id="_Jku50OkXEe2AMfGhoxL_ZQ" event="_JZesEOkXEe2AMfGhoxL_ZQ"/>
+              </transition>
+              <transition xmi:type="uml:Transition" xmi:id="_MQk1AOkXEe2AMfGhoxL_ZQ" source="_5qV5sOkWEe2AMfGhoxL_ZQ" target="_66lukMqKEeyDGbzl89oc0w">
+                <trigger xmi:type="uml:Trigger" xmi:id="_QW2G0OkXEe2AMfGhoxL_ZQ" event="_QHbKwOkXEe2AMfGhoxL_ZQ"/>
+              </transition>
+              <transition xmi:type="uml:Transition" xmi:id="_Raf8MOkXEe2AMfGhoxL_ZQ" source="_5qV5sOkWEe2AMfGhoxL_ZQ" target="_zN8L8MqKEeyDGbzl89oc0w">
+                <trigger xmi:type="uml:Trigger" xmi:id="_WQxHkOkXEe2AMfGhoxL_ZQ" event="_V_PSsOkXEe2AMfGhoxL_ZQ"/>
+              </transition>
+              <transition xmi:type="uml:Transition" xmi:id="_XfchMOkXEe2AMfGhoxL_ZQ" source="_66lukMqKEeyDGbzl89oc0w" target="_5qV5sOkWEe2AMfGhoxL_ZQ">
+                <trigger xmi:type="uml:Trigger" xmi:id="_bwKIcOkXEe2AMfGhoxL_ZQ" event="_bf7UEOkXEe2AMfGhoxL_ZQ"/>
+              </transition>
+              <subvertex xmi:type="uml:Pseudostate" xmi:id="_xn-TsMqKEeyDGbzl89oc0w" name="Initial"/>
+              <subvertex xmi:type="uml:State" xmi:id="_zN8L8MqKEeyDGbzl89oc0w" name="Accelerating" stateInvariant="_RW2igLanEe2MHYx4f70mvQ">
+                <ownedRule xmi:type="uml:Constraint" xmi:id="_x6fwMPIgEeyix4Ssw_PBhw">
+                  <specification xmi:type="uml:LiteralString" xmi:id="_3leWAPIgEeyix4Ssw_PBhw" value="speed &lt; 12 and thr >= 0 and brake = 0 and left = 0 and right = 0"/>
+                </ownedRule>
+                <ownedRule xmi:type="uml:Constraint" xmi:id="_RW2igLanEe2MHYx4f70mvQ">
+                  <specification xmi:type="uml:LiteralString" xmi:id="_RW2igbanEe2MHYx4f70mvQ" value="thr > 0 and thr &lt; 1 and right = 0 and left = 0"/>
+                </ownedRule>
+                <ownedRule xmi:type="uml:Constraint" xmi:id="_QXlz0OdNEe24HKfGzk6RFw">
+                  <specification xmi:type="uml:LiteralString" xmi:id="_QXlz0edNEe24HKfGzk6RFw" name="constraintSpec" value="self.current.speed > 0 &#xD;&#xA;and self.curent.speed > self.previous.speed&#xD;&#xA;and self.current.steer = 0"/>
+                </ownedRule>
+              </subvertex>
+              <subvertex xmi:type="uml:State" xmi:id="_66lukMqKEeyDGbzl89oc0w" name="Decelerating" stateInvariant="_1INGALanEe2MHYx4f70mvQ">
+                <ownedRule xmi:type="uml:Constraint" xmi:id="_4f_iUMq0EeyBxZM8hgMRvg">
+                  <specification xmi:type="uml:LiteralString" xmi:id="__G3vsMq0EeyBxZM8hgMRvg" value="speed > 25 and left = 0 and brake >= 0 and thr = 0 and right = 0"/>
+                </ownedRule>
+                <ownedRule xmi:type="uml:Constraint" xmi:id="_1INGALanEe2MHYx4f70mvQ">
+                  <specification xmi:type="uml:LiteralString" xmi:id="_1INGAbanEe2MHYx4f70mvQ" value="brake > 0 and brake &lt; 1 and right = 0 and left =0"/>
+                </ownedRule>
+                <ownedRule xmi:type="uml:Constraint" xmi:id="_LTyygOmtEe23Ku9-c1Ae_A">
+                  <specification xmi:type="uml:LiteralString" xmi:id="_LT0nsOmtEe23Ku9-c1Ae_A" name="constraintSpec" value="self.curent.speed &lt; self.previous.speed&#xD;&#xA;and self.current.steer = 0"/>
+                </ownedRule>
+              </subvertex>
+              <subvertex xmi:type="uml:State" xmi:id="_CfGMcN_BEeysC_5v9OfFmQ" name="Pseudo">
+                <ownedRule xmi:type="uml:Constraint" xmi:id="_8cPJoP6iEeyzz9u9j9VYPw">
+                  <specification xmi:type="uml:LiteralString" xmi:id="_8cPJof6iEeyzz9u9j9VYPw" value="brake = 0 and left = 0 and right = 0"/>
+                </ownedRule>
+              </subvertex>
+              <subvertex xmi:type="uml:State" xmi:id="_UU9e0Lz8Ee2Vu44zAWD7uQ" name="Turning Left" stateInvariant="_uMwFsOdNEe24HKfGzk6RFw">
+                <ownedRule xmi:type="uml:Constraint" xmi:id="_RZ-6YOdMEe24HKfGzk6RFw">
+                  <specification xmi:type="uml:LiteralString" xmi:id="_RZ_hcOdMEe24HKfGzk6RFw" name="constraintSpec" value="self.current.speed > 0 &#xD;&#xA;and self.current.steer > 0"/>
+                </ownedRule>
+                <ownedRule xmi:type="uml:Constraint" xmi:id="_uMwFsOdNEe24HKfGzk6RFw">
+                  <specification xmi:type="uml:LiteralString" xmi:id="_uMwFsedNEe24HKfGzk6RFw" value="thr > 0 and thr &lt; 1 and left > 0 and left &lt; 1"/>
+                </ownedRule>
+              </subvertex>
+              <subvertex xmi:type="uml:State" xmi:id="_XlgpkLz8Ee2Vu44zAWD7uQ" name="Turning Right" stateInvariant="_tpEUYOdOEe24HKfGzk6RFw">
+                <ownedRule xmi:type="uml:Constraint" xmi:id="_tpEUYOdOEe24HKfGzk6RFw">
+                  <specification xmi:type="uml:LiteralString" xmi:id="_tpEUYedOEe24HKfGzk6RFw" value="thr > 0 and thr &lt; 1 and right > 0 and right &lt; 1"/>
+                </ownedRule>
+              </subvertex>
+              <subvertex xmi:type="uml:State" xmi:id="_5qV5sOkWEe2AMfGhoxL_ZQ" name="Maintaining Speed">
+                <ownedRule xmi:type="uml:Constraint" xmi:id="_YVr6wOkZEe2AMfGhoxL_ZQ">
+                  <specification xmi:type="uml:LiteralString" xmi:id="_YVsh0OkZEe2AMfGhoxL_ZQ" name="constraintSpec" value="self.current.speed > 0 and self.curent.speed = self.previous.speed &#xD;&#xA;and self.current.steer = 0"/>
+                </ownedRule>
+              </subvertex>
+            </region>
+          </subvertex>
+          <subvertex xmi:type="uml:State" xmi:id="_lkrS8MPREeyd3c2n8E7mgg" name="Switching Lane" stateInvariant="_jTNFcK0GEe2EMpmZo7IPrg">
+            <ownedRule xmi:type="uml:Constraint" xmi:id="_QFjFUPOcEeyrvapgDqEXTQ">
+              <specification xmi:type="uml:LiteralString" xmi:id="_QFjFUfOcEeyrvapgDqEXTQ" value="curLaneId &lt;> nextLaneId"/>
+            </ownedRule>
+            <ownedRule xmi:type="uml:Constraint" xmi:id="_jTNFcK0GEe2EMpmZo7IPrg">
+              <specification xmi:type="uml:LiteralString" xmi:id="_jTNFca0GEe2EMpmZo7IPrg" value="curLaneId &lt;> nextLaneId and isJunction = false"/>
+            </ownedRule>
+            <ownedRule xmi:type="uml:Constraint" xmi:id="_UO9noOm2Ee2Sr8OTvGezkQ">
+              <specification xmi:type="uml:LiteralString" xmi:id="_UO_c0Om2Ee2Sr8OTvGezkQ" name="constraintSpec" value="self.current.laneId &lt;> self.previous.laneId"/>
+            </ownedRule>
+            <region xmi:type="uml:Region" xmi:id="_OMR2EP6eEeyzz9u9j9VYPw" name="Switching Lane Region">
+              <ownedRule xmi:type="uml:Constraint" xmi:id="_YU6vYOdQEe24HKfGzk6RFw">
+                <specification xmi:type="uml:LiteralString" xmi:id="_YU79gOdQEe24HKfGzk6RFw" name="constraintSpec" value="self.current.speed > 0 &#xD;&#xA;and self.current.steer > 0"/>
+              </ownedRule>
+              <transition xmi:type="uml:Transition" xmi:id="_D3eTgP6gEeyzz9u9j9VYPw" source="_OMbnEP6eEeyzz9u9j9VYPw" target="_CuX9cP6gEeyzz9u9j9VYPw"/>
+              <transition xmi:type="uml:Transition" xmi:id="_ppeKILatEe2MHYx4f70mvQ" source="_GAW8oLatEe2MHYx4f70mvQ" target="_FidfsLatEe2MHYx4f70mvQ">
+                <ownedRule xmi:type="uml:Constraint" xmi:id="_0ybmILauEe2MHYx4f70mvQ">
+                  <specification xmi:type="uml:LiteralString" xmi:id="_0ybmIbauEe2MHYx4f70mvQ" value="left > 0 and left &lt; 1 and thr > 0 and thr &lt; 1"/>
+                </ownedRule>
+                <trigger xmi:type="uml:Trigger" xmi:id="_diWWkL4cEe2289CgWibYoA" event="_dVY4oL4cEe2289CgWibYoA"/>
+              </transition>
+              <transition xmi:type="uml:Transition" xmi:id="_qPpZULatEe2MHYx4f70mvQ" source="_FidfsLatEe2MHYx4f70mvQ" target="_GAW8oLatEe2MHYx4f70mvQ">
+                <ownedRule xmi:type="uml:Constraint" xmi:id="_WZQoQLauEe2MHYx4f70mvQ">
+                  <specification xmi:type="uml:LiteralString" xmi:id="_WZQoQbauEe2MHYx4f70mvQ" value="right > 0 and right &lt; 1 and thr > 0 and thr &lt; 1"/>
+                </ownedRule>
+                <trigger xmi:type="uml:Trigger" xmi:id="_kQPx8L4cEe2289CgWibYoA" event="_kE3BUL4cEe2289CgWibYoA"/>
+              </transition>
+              <transition xmi:type="uml:Transition" xmi:id="_3bs5ALavEe2MHYx4f70mvQ" source="_FidfsLatEe2MHYx4f70mvQ" target="_FidfsLatEe2MHYx4f70mvQ">
+                <ownedRule xmi:type="uml:Constraint" xmi:id="_XF6gALcIEe2dseti1k2jkg">
+                  <specification xmi:type="uml:LiteralString" xmi:id="_XF6gAbcIEe2dseti1k2jkg" value="left > 0 and left &lt; 1 and thr > 0 and thr &lt; 1"/>
+                </ownedRule>
+                <trigger xmi:type="uml:Trigger" xmi:id="_OdCkUL4cEe2289CgWibYoA" event="_OPqPoL4cEe2289CgWibYoA"/>
+              </transition>
+              <transition xmi:type="uml:Transition" xmi:id="_5mU9gLavEe2MHYx4f70mvQ" source="_GAW8oLatEe2MHYx4f70mvQ" target="_GAW8oLatEe2MHYx4f70mvQ">
+                <ownedRule xmi:type="uml:Constraint" xmi:id="_eoQ3ILcIEe2dseti1k2jkg">
+                  <specification xmi:type="uml:LiteralString" xmi:id="_eoQ3IbcIEe2dseti1k2jkg" value="right > 0 and right &lt; 1 and thr > 0 and thr &lt; 1"/>
+                </ownedRule>
+                <trigger xmi:type="uml:Trigger" xmi:id="_q3tOIL4cEe2289CgWibYoA" event="_qpd90L4cEe2289CgWibYoA"/>
+              </transition>
+              <transition xmi:type="uml:Transition" xmi:id="_VPS74L3HEe2dQcRoI9CwJQ" source="_CuX9cP6gEeyzz9u9j9VYPw" target="_GAW8oLatEe2MHYx4f70mvQ">
+                <ownedRule xmi:type="uml:Constraint" xmi:id="_d66BIL3HEe2dQcRoI9CwJQ">
+                  <specification xmi:type="uml:LiteralString" xmi:id="_d66BIb3HEe2dQcRoI9CwJQ" value="right > 0 and right &lt; 1 and thr > 0 and thr &lt; 1"/>
+                </ownedRule>
+                <trigger xmi:type="uml:Trigger" xmi:id="_Yu-HwL3HEe2dQcRoI9CwJQ" event="_YfzqYL3HEe2dQcRoI9CwJQ"/>
+              </transition>
+              <transition xmi:type="uml:Transition" xmi:id="_utnwYL3HEe2dQcRoI9CwJQ" source="_CuX9cP6gEeyzz9u9j9VYPw" target="_FidfsLatEe2MHYx4f70mvQ">
+                <ownedRule xmi:type="uml:Constraint" xmi:id="_5pavkL3HEe2dQcRoI9CwJQ">
+                  <specification xmi:type="uml:LiteralString" xmi:id="_5pavkb3HEe2dQcRoI9CwJQ" value="left > 0 and left &lt; 1 and thr > 0 and thr &lt; 1"/>
+                </ownedRule>
+                <trigger xmi:type="uml:Trigger" xmi:id="_0jOR0L3HEe2dQcRoI9CwJQ" event="_0UXWcL3HEe2dQcRoI9CwJQ"/>
+              </transition>
+              <subvertex xmi:type="uml:Pseudostate" xmi:id="_OMbnEP6eEeyzz9u9j9VYPw" name="Initial"/>
+              <subvertex xmi:type="uml:State" xmi:id="_CuX9cP6gEeyzz9u9j9VYPw" name="Pseudo"/>
+              <subvertex xmi:type="uml:State" xmi:id="_FidfsLatEe2MHYx4f70mvQ" name="Turning Left" stateInvariant="_kPjfILatEe2MHYx4f70mvQ">
+                <ownedRule xmi:type="uml:Constraint" xmi:id="_kPjfILatEe2MHYx4f70mvQ">
+                  <specification xmi:type="uml:LiteralString" xmi:id="_kPjfIbatEe2MHYx4f70mvQ" value="left > 0 and left &lt; 1 and thr > 0 and thr &lt; 1"/>
+                </ownedRule>
+              </subvertex>
+              <subvertex xmi:type="uml:State" xmi:id="_GAW8oLatEe2MHYx4f70mvQ" name="Turning Right" stateInvariant="_odHEsLatEe2MHYx4f70mvQ">
+                <ownedRule xmi:type="uml:Constraint" xmi:id="_odHEsLatEe2MHYx4f70mvQ">
+                  <specification xmi:type="uml:LiteralString" xmi:id="_odHEsbatEe2MHYx4f70mvQ" value="right > 0 and right &lt; 1 and thr > 0 and thr &lt; 1"/>
+                </ownedRule>
+                <ownedRule xmi:type="uml:Constraint" xmi:id="_J0DG8OdQEe24HKfGzk6RFw">
+                  <specification xmi:type="uml:LiteralString" xmi:id="_J0DG8edQEe24HKfGzk6RFw" name="constraintSpec" value="self.current.speed > 0 &#xD;&#xA;and self.current.direction &lt; self.previous.direction"/>
+                </ownedRule>
+              </subvertex>
+            </region>
+          </subvertex>
+          <subvertex xmi:type="uml:Pseudostate" xmi:id="_MENOsAGxEe2CoqFL20WK_A" name="Initial"/>
+        </region>
+      </ownedBehavior>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_SOLNwMPQEeyd3c2n8E7mgg" name="throttle">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_Wb0S4MPQEeyd3c2n8E7mgg" name="thr">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_xRgLEMqjEeyBxZM8hgMRvg" name="brake">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_2QcKQMqjEeyBxZM8hgMRvg" name="brake">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_noWnkOu1EeyOaujmFYHlMw" name="turnLeft">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_7IqlgOu1EeyOaujmFYHlMw" name="left">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_CQrhgOvsEeytQs6VUCqarw" name="thr">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_Da6IgOu2EeyOaujmFYHlMw" name="turnRight">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_J1LdQOu2EeyOaujmFYHlMw" name="right">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_8nq_sOvtEeytQs6VUCqarw" name="thr">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_nL3qcOmeEe2krLOgLClFeg" name="updateStatus"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:ChangeEvent" xmi:id="_5dHuMMqOEeyDGbzl89oc0w">
+      <changeExpression xmi:type="uml:LiteralString" xmi:id="_5dHuMcqOEeyDGbzl89oc0w" value="speed &lt; 12"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_EklTYMqmEeyBxZM8hgMRvg" operation="_SOLNwMPQEeyd3c2n8E7mgg"/>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_SFbCMMqmEeyBxZM8hgMRvg" operation="_xRgLEMqjEeyBxZM8hgMRvg"/>
+    <packagedElement xmi:type="uml:ChangeEvent" xmi:id="_mXXRYMqmEeyBxZM8hgMRvg">
+      <changeExpression xmi:type="uml:LiteralString" xmi:id="_mXXRYcqmEeyBxZM8hgMRvg" value="isObstacle = true"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:ChangeEvent" xmi:id="_q7j1UMqmEeyBxZM8hgMRvg">
+      <changeExpression xmi:type="uml:LiteralString" xmi:id="_q7j1UcqmEeyBxZM8hgMRvg" name="hasObstacle = false" value="hasObstacle = false"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:ChangeEvent" xmi:id="_s2EkwMqnEeyBxZM8hgMRvg">
+      <changeExpression xmi:type="uml:LiteralString" xmi:id="_s2EkwcqnEeyBxZM8hgMRvg" value="isObstacle = true"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_Sm2pYMqoEeyBxZM8hgMRvg" operation="_xRgLEMqjEeyBxZM8hgMRvg"/>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_a4DqkMqoEeyBxZM8hgMRvg" operation="_xRgLEMqjEeyBxZM8hgMRvg"/>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_lYKzUMqoEeyBxZM8hgMRvg" operation="_xRgLEMqjEeyBxZM8hgMRvg"/>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_E1fZAMqtEeyBxZM8hgMRvg"/>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_HrZ2MMqtEeyBxZM8hgMRvg"/>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_RghhMMqtEeyBxZM8hgMRvg" operation="_SOLNwMPQEeyd3c2n8E7mgg"/>
+    <packagedElement xmi:type="uml:ChangeEvent" xmi:id="_dMDhUN6PEey3H4p39eTAfQ">
+      <changeExpression xmi:type="uml:LiteralString" xmi:id="_dMEIYN6PEey3H4p39eTAfQ" value="curLaneId = nextLaneId"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:ChangeEvent" xmi:id="_uWcwwN6PEey3H4p39eTAfQ">
+      <changeExpression xmi:type="uml:LiteralString" xmi:id="_uWcwwd6PEey3H4p39eTAfQ" value="curLaneId = nextLaneId"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_Ix67YOu0EeyOaujmFYHlMw"/>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_QO5N0Ou1EeyOaujmFYHlMw"/>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_FzOUoOu_EeyOaujmFYHlMw" operation="_noWnkOu1EeyOaujmFYHlMw"/>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_d8T0gOu_EeyOaujmFYHlMw" operation="_Da6IgOu2EeyOaujmFYHlMw"/>
+    <packagedElement xmi:type="uml:ChangeEvent" xmi:id="__h8kkOxSEeyF5cm48pUUbA">
+      <changeExpression xmi:type="uml:LiteralString" xmi:id="__h8kkexSEeyF5cm48pUUbA" value="speed > 18"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:ChangeEvent" xmi:id="_NRCKwOxTEeyF5cm48pUUbA">
+      <changeExpression xmi:type="uml:LiteralString" xmi:id="_NRCKwexTEeyF5cm48pUUbA" value="speed > 22"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:ChangeEvent" xmi:id="_R5xQcOxTEeyF5cm48pUUbA">
+      <changeExpression xmi:type="uml:LiteralString" xmi:id="_R5xQcexTEeyF5cm48pUUbA" value="speed &lt; 22"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:ChangeEvent" xmi:id="_m6ZKkOxTEeyF5cm48pUUbA">
+      <changeExpression xmi:type="uml:LiteralString" xmi:id="_m6ZKkexTEeyF5cm48pUUbA" value="speed > 22"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:ChangeEvent" xmi:id="_ujoM0OxTEeyF5cm48pUUbA">
+      <changeExpression xmi:type="uml:LiteralString" xmi:id="_ujoM0exTEeyF5cm48pUUbA" value="speed &lt; 18"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:ChangeEvent" xmi:id="_0y_5IOxTEeyF5cm48pUUbA">
+      <changeExpression xmi:type="uml:LiteralString" xmi:id="_0y_5IexTEeyF5cm48pUUbA" value="speed > 18 and speed &lt; 22"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:ChangeEvent" xmi:id="_9nWDoOxTEeyF5cm48pUUbA">
+      <changeExpression xmi:type="uml:LiteralString" xmi:id="_9nWDoexTEeyF5cm48pUUbA" value="speed > 18 and speed &lt; 22"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:ChangeEvent" xmi:id="_LrvEEOxXEeyF5cm48pUUbA">
+      <changeExpression xmi:type="uml:LiteralString" xmi:id="_LrvEEexXEeyF5cm48pUUbA" value="speed &lt; 12"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:ChangeEvent" xmi:id="_cOJ_oOx6EeyFccG3uPMHZA">
+      <changeExpression xmi:type="uml:LiteralString" xmi:id="_cOJ_oex6EeyFccG3uPMHZA" value="speed &lt; 12"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:ChangeEvent" xmi:id="_qTgUQOx7EeyFccG3uPMHZA">
+      <changeExpression xmi:type="uml:LiteralString" xmi:id="_qTg7UOx7EeyFccG3uPMHZA" value="speed &lt; 20"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:ChangeEvent" xmi:id="_ipbyQOyAEeyFccG3uPMHZA">
+      <changeExpression xmi:type="uml:LiteralString" xmi:id="_ipbyQeyAEeyFccG3uPMHZA" value="speed &lt; 12"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:ChangeEvent" xmi:id="_oiDLcOyAEeyFccG3uPMHZA">
+      <changeExpression xmi:type="uml:LiteralString" xmi:id="_oiDLceyAEeyFccG3uPMHZA" value="speed &lt; 12"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:ChangeEvent" xmi:id="_r3juwPCeEeyQvPMTuDmAkA">
+      <changeExpression xmi:type="uml:LiteralString" xmi:id="_r3juwfCeEeyQvPMTuDmAkA" value="speed > 5"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:ChangeEvent" xmi:id="_bhWmQPCnEeyQvPMTuDmAkA">
+      <changeExpression xmi:type="uml:LiteralString" xmi:id="_bhWmQfCnEeyQvPMTuDmAkA" value="speed > 5"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:ChangeEvent" xmi:id="_U5FowPIbEeyix4Ssw_PBhw">
+      <changeExpression xmi:type="uml:LiteralString" xmi:id="_U5FowfIbEeyix4Ssw_PBhw" value="speed &lt; 12"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:ChangeEvent" xmi:id="_q-s3IAGUEe2FG_1FfEJlNg">
+      <changeExpression xmi:type="uml:LiteralString" xmi:id="_q-s3IQGUEe2FG_1FfEJlNg" value="isObstacle = false"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:ChangeEvent" xmi:id="_yVES0AG3Ee2CoqFL20WK_A">
+      <changeExpression xmi:type="uml:LiteralString" xmi:id="_yVES0QG3Ee2CoqFL20WK_A" value="hasObstacle = true"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:ChangeEvent" xmi:id="_k3YPkAHAEe2CoqFL20WK_A">
+      <changeExpression xmi:type="uml:LiteralString" xmi:id="_k3YPkQHAEe2CoqFL20WK_A" value="curLaneId &lt;> nextLaneId"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:ChangeEvent" xmi:id="_sEhywAHAEe2CoqFL20WK_A">
+      <changeExpression xmi:type="uml:LiteralString" xmi:id="_sEhywQHAEe2CoqFL20WK_A" value="curLaneId &lt;> nextLaneId"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:ChangeEvent" xmi:id="_fCnXYAKLEe25mI68ReoGCA">
+      <changeExpression xmi:type="uml:LiteralString" xmi:id="_fCnXYQKLEe25mI68ReoGCA" value="curLaneId &lt;> nextLaneId"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:ChangeEvent" xmi:id="_j1vIIAKLEe25mI68ReoGCA">
+      <changeExpression xmi:type="uml:LiteralString" xmi:id="_j1vIIQKLEe25mI68ReoGCA" value="curLaneId = nextLaneId"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_EeRmgEnbEe2NtcnG8s-E9Q"/>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_kMVo0EndEe2NtcnG8s-E9Q"/>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_J00GAEneEe2ty_1GfTsR1w"/>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_MiRDYEnhEe2ty_1GfTsR1w"/>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_yVaL4EsHEe2_q7XqqcZH6A"/>
+    <packagedElement xmi:type="uml:ChangeEvent" xmi:id="_BRmHcFAjEe2v_KgjA6NBtw">
+      <changeExpression xmi:type="uml:LiteralString" xmi:id="_BRmHcVAjEe2v_KgjA6NBtw" value="isObstacle = true"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_T30vwFXWEe26K_DPxzswiA"/>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_RvAAEFXsEe2xmdnaz6hOIg"/>
+    <packagedElement xmi:type="uml:ChangeEvent" xmi:id="_2wbdkFkcEe2r3Nkxzz25Ww">
+      <changeExpression xmi:type="uml:LiteralString" xmi:id="_2wbdkVkcEe2r3Nkxzz25Ww" value="isObstacle = false"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:ChangeEvent" xmi:id="_C4rBwFkdEe2r3Nkxzz25Ww">
+      <changeExpression xmi:type="uml:LiteralString" xmi:id="_C4rBwVkdEe2r3Nkxzz25Ww" value="curLaneId &lt;> nextLaneId"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:ChangeEvent" xmi:id="_Gri2cFkdEe2r3Nkxzz25Ww">
+      <changeExpression xmi:type="uml:LiteralString" xmi:id="_Gri2cVkdEe2r3Nkxzz25Ww" value="curLaneId &lt;> nextLaneId"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:ChangeEvent" xmi:id="_sxFGUHqLEe20GIdTtabFMg">
+      <changeExpression xmi:type="uml:LiteralString" xmi:id="_sxFGUXqLEe20GIdTtabFMg" value="curLaneId = nextLaneId"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:ChangeEvent" xmi:id="_0WNEoHqLEe20GIdTtabFMg">
+      <changeExpression xmi:type="uml:LiteralString" xmi:id="_0WNEoXqLEe20GIdTtabFMg" value="curLaneId &lt;> nextLaneId"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:ChangeEvent" xmi:id="_WFmL4IHpEe2HuPdZUZyV7w">
+      <changeExpression xmi:type="uml:LiteralString" xmi:id="_WFmL4YHpEe2HuPdZUZyV7w" value="speed &lt; 18"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:ChangeEvent" xmi:id="_evkLIJZdEe2WLfCM7ZgngQ">
+      <changeExpression xmi:type="uml:LiteralString" xmi:id="_evkLIZZdEe2WLfCM7ZgngQ" value="curLaneId &lt;> nextLaneId and isObstacle = false"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:ChangeEvent" xmi:id="_Odl9EK35Ee2Lo7N5qwPZKQ">
+      <changeExpression xmi:type="uml:LiteralString" xmi:id="_Odl9Ea35Ee2Lo7N5qwPZKQ" value="curLaneId = nextLaneId"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_MbZfsLaoEe2MHYx4f70mvQ" operation="_SOLNwMPQEeyd3c2n8E7mgg"/>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_53XHULaoEe2MHYx4f70mvQ"/>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_lkcgYLarEe2MHYx4f70mvQ"/>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_aVjwoLasEe2MHYx4f70mvQ"/>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_oicGELasEe2MHYx4f70mvQ"/>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_8YUO4LatEe2MHYx4f70mvQ"/>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_GsM5gLauEe2MHYx4f70mvQ"/>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_SYRfELauEe2MHYx4f70mvQ"/>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_w4s7gLauEe2MHYx4f70mvQ"/>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_HybFQLavEe2MHYx4f70mvQ"/>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_QLg3ILavEe2MHYx4f70mvQ"/>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_fl0B8LavEe2MHYx4f70mvQ"/>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_sLmdwLavEe2MHYx4f70mvQ"/>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_Y2RyYLawEe2MHYx4f70mvQ"/>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_mfI0wLawEe2MHYx4f70mvQ"/>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_DRrMALaxEe2MHYx4f70mvQ"/>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_VYF-0LaxEe2MHYx4f70mvQ"/>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_7ylu0LaxEe2MHYx4f70mvQ"/>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_IfrFcLayEe2MHYx4f70mvQ"/>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_ch9IALayEe2MHYx4f70mvQ"/>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_taw4MLayEe2MHYx4f70mvQ"/>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_Aa1P0LazEe2MHYx4f70mvQ"/>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_L3uJ4LazEe2MHYx4f70mvQ"/>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_YBO5YLazEe2MHYx4f70mvQ"/>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_gjVdULazEe2MHYx4f70mvQ"/>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_UVu3YLcIEe2dseti1k2jkg"/>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_bc1c8LcIEe2dseti1k2jkg"/>
+    <packagedElement xmi:type="uml:ChangeEvent" xmi:id="_Su0IoLmUEe2L_4L8rUyu-w">
+      <changeExpression xmi:type="uml:LiteralString" xmi:id="_Su0IobmUEe2L_4L8rUyu-w" value="curLaneId &lt;> nextLaneId and isObstacle = false"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:ChangeEvent" xmi:id="_ZtsmULmUEe2L_4L8rUyu-w">
+      <changeExpression xmi:type="uml:LiteralString" xmi:id="_ZtsmUbmUEe2L_4L8rUyu-w" value="curLaneId &lt;> nextLaneId&#xD;&#xA; and isObstacle = false"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:ChangeEvent" xmi:id="_j9VqILmUEe2L_4L8rUyu-w">
+      <changeExpression xmi:type="uml:LiteralString" xmi:id="_j9VqIbmUEe2L_4L8rUyu-w" value="curLaneId = nextLaneId&#xD;&#xA; and isObstacle = false"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_8sBpMLz8Ee2Vu44zAWD7uQ" operation="_Da6IgOu2EeyOaujmFYHlMw"/>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_MwRI4Lz9Ee2Vu44zAWD7uQ" operation="_noWnkOu1EeyOaujmFYHlMw"/>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_QAhYsLz9Ee2Vu44zAWD7uQ" operation="_Da6IgOu2EeyOaujmFYHlMw"/>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_kUj5oLz9Ee2Vu44zAWD7uQ" operation="_noWnkOu1EeyOaujmFYHlMw"/>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_nexy4Lz9Ee2Vu44zAWD7uQ" operation="_Da6IgOu2EeyOaujmFYHlMw"/>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_-v7lMLz9Ee2Vu44zAWD7uQ" operation="_noWnkOu1EeyOaujmFYHlMw"/>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_CHRUcLz-Ee2Vu44zAWD7uQ" operation="_Da6IgOu2EeyOaujmFYHlMw"/>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_3nmbILz-Ee2Vu44zAWD7uQ" operation="_SOLNwMPQEeyd3c2n8E7mgg"/>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_ZTvacL1TEe2X2_b1K7jgYg" operation="_Da6IgOu2EeyOaujmFYHlMw"/>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_qL31ML1TEe2X2_b1K7jgYg" operation="_xRgLEMqjEeyBxZM8hgMRvg"/>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_z8pLsL1TEe2X2_b1K7jgYg" operation="_SOLNwMPQEeyd3c2n8E7mgg"/>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_ADFZEL1UEe2X2_b1K7jgYg" operation="_noWnkOu1EeyOaujmFYHlMw"/>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_YfzqYL3HEe2dQcRoI9CwJQ" operation="_Da6IgOu2EeyOaujmFYHlMw"/>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_0UXWcL3HEe2dQcRoI9CwJQ" operation="_noWnkOu1EeyOaujmFYHlMw"/>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_OPqPoL4cEe2289CgWibYoA" operation="_noWnkOu1EeyOaujmFYHlMw"/>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_dVY4oL4cEe2289CgWibYoA" operation="_noWnkOu1EeyOaujmFYHlMw"/>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_kE3BUL4cEe2289CgWibYoA" operation="_Da6IgOu2EeyOaujmFYHlMw"/>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_qpd90L4cEe2289CgWibYoA" operation="_Da6IgOu2EeyOaujmFYHlMw"/>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_1I2t0L4cEe2289CgWibYoA" operation="_xRgLEMqjEeyBxZM8hgMRvg"/>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_5o05EL4cEe2289CgWibYoA" operation="_SOLNwMPQEeyd3c2n8E7mgg"/>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_92LqUL4cEe2289CgWibYoA" operation="_xRgLEMqjEeyBxZM8hgMRvg"/>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_mAhAQL4dEe2289CgWibYoA" operation="_SOLNwMPQEeyd3c2n8E7mgg"/>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_y8aO8L4dEe2289CgWibYoA" operation="_SOLNwMPQEeyd3c2n8E7mgg"/>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_Yuy2EL4eEe2289CgWibYoA" operation="_xRgLEMqjEeyBxZM8hgMRvg"/>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_vLHJsOEeEe2zlbU1jP9qDw" operation="_xRgLEMqjEeyBxZM8hgMRvg"/>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_r-nB4OdHEe24HKfGzk6RFw" operation="_SOLNwMPQEeyd3c2n8E7mgg"/>
+    <packagedElement xmi:type="uml:ChangeEvent" xmi:id="_PwPI0OdhEe24HKfGzk6RFw">
+      <changeExpression xmi:type="uml:LiteralString" xmi:id="_PwPI0edhEe24HKfGzk6RFw" value="hasObstacle = true"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:ChangeEvent" xmi:id="_YtySoOdhEe24HKfGzk6RFw">
+      <changeExpression xmi:type="uml:LiteralString" xmi:id="_YtySoedhEe24HKfGzk6RFw" value="hasObstacle = false"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:ChangeEvent" xmi:id="_dcA8UOdhEe24HKfGzk6RFw">
+      <changeExpression xmi:type="uml:LiteralString" xmi:id="_dcA8UedhEe24HKfGzk6RFw" value="hasObstacle = false"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:ChangeEvent" xmi:id="_kzNMUOdhEe24HKfGzk6RFw">
+      <changeExpression xmi:type="uml:LiteralString" xmi:id="_kzNMUedhEe24HKfGzk6RFw" value="hasObstacle = false"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:ChangeEvent" xmi:id="_sxJ6UOdhEe24HKfGzk6RFw">
+      <changeExpression xmi:type="uml:LiteralString" xmi:id="_sxJ6UedhEe24HKfGzk6RFw" value="curLaneId &lt;> nextLaneId&#xD;&#xA; and hasObstacle = false"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:ChangeEvent" xmi:id="_62onQOdhEe24HKfGzk6RFw">
+      <changeExpression xmi:type="uml:LiteralString" xmi:id="_62onQedhEe24HKfGzk6RFw" value="curLaneId = nextLaneId&#xD;&#xA; and hasObstacle = false"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:ChangeEvent" xmi:id="_VQr_8OgtEe2nmrujHz9QnA">
+      <changeExpression xmi:type="uml:LiteralString" xmi:id="_VQr_8egtEe2nmrujHz9QnA" value="curLaneId = nextLaneId and hasObstacle = false&#xD;&#xA; and hasJunction = false"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:ChangeEvent" xmi:id="_uO8NQOgtEe2nmrujHz9QnA">
+      <changeExpression xmi:type="uml:LiteralString" xmi:id="_uO8NQegtEe2nmrujHz9QnA" value="hasObstacle = true"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:ChangeEvent" xmi:id="_xvDeAOgtEe2nmrujHz9QnA">
+      <changeExpression xmi:type="uml:LiteralString" xmi:id="_xvDeAegtEe2nmrujHz9QnA" value="hasObstacle = true"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:ChangeEvent" xmi:id="_CJ7VAOguEe2nmrujHz9QnA">
+      <changeExpression xmi:type="uml:LiteralString" xmi:id="_CJ7VAeguEe2nmrujHz9QnA" value="curLaneId &lt;> nextLaneId and hasJunction = false"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:ChangeEvent" xmi:id="_jf6CQOguEe2nmrujHz9QnA">
+      <changeExpression xmi:type="uml:LiteralString" xmi:id="_jf6CQeguEe2nmrujHz9QnA" value="curLaneId &lt;> nextLaneId&#xD;&#xA; and hasObstacle = false&#xD;&#xA;and hasJunction = false"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:ChangeEvent" xmi:id="_uaQP8OguEe2nmrujHz9QnA">
+      <changeExpression xmi:type="uml:LiteralString" xmi:id="_uaQP8eguEe2nmrujHz9QnA" value="curLaneId = nextLaneId&#xD;&#xA; and hasObstacle = false&#xD;&#xA;and hasJunction = false"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:ChangeEvent" xmi:id="_0BNQIOjYEe28yvJy9eUhmQ">
+      <changeExpression xmi:type="uml:LiteralString" xmi:id="_0BNQIejYEe28yvJy9eUhmQ" value="curLaneId = nextLaneId and hasJunction = false"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:ChangeEvent" xmi:id="_4RW2sOjYEe28yvJy9eUhmQ">
+      <changeExpression xmi:type="uml:LiteralString" xmi:id="_4RW2sejYEe28yvJy9eUhmQ" value="curLaneId = nextLaneId and hasJunction = false"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:ChangeEvent" xmi:id="_9keWIOjYEe28yvJy9eUhmQ">
+      <changeExpression xmi:type="uml:LiteralString" xmi:id="_9keWIejYEe28yvJy9eUhmQ" value="curLaneId = nextLaneId &#xD;&#xA;and hasJunction = false"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:ChangeEvent" xmi:id="_NmtDoOjZEe28yvJy9eUhmQ">
+      <changeExpression xmi:type="uml:LiteralString" xmi:id="_NmtDoejZEe28yvJy9eUhmQ" value="curLaneId &lt;> nextLaneId &#xD;&#xA;and hasJunction = false"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_JZesEOkXEe2AMfGhoxL_ZQ" operation="_SOLNwMPQEeyd3c2n8E7mgg"/>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_QHbKwOkXEe2AMfGhoxL_ZQ" operation="_xRgLEMqjEeyBxZM8hgMRvg"/>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_V_PSsOkXEe2AMfGhoxL_ZQ" operation="_SOLNwMPQEeyd3c2n8E7mgg"/>
+    <packagedElement xmi:type="uml:CallEvent" xmi:id="_bf7UEOkXEe2AMfGhoxL_ZQ" operation="_SOLNwMPQEeyd3c2n8E7mgg"/>
+    <packagedElement xmi:type="uml:ChangeEvent" xmi:id="_LTZYoOmnEe23Ku9-c1Ae_A">
+      <changeExpression xmi:type="uml:LiteralString" xmi:id="_LTZYoemnEe23Ku9-c1Ae_A" value="self.current.curLaneId &lt;> nextLaneId &#xD;&#xA;and hasJunction = false"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:ChangeEvent" xmi:id="_MFH7EOmoEe23Ku9-c1Ae_A">
+      <changeExpression xmi:type="uml:LiteralString" xmi:id="_MFIiIOmoEe23Ku9-c1Ae_A" value="self.current.laneId &lt;> self.previous.laneId &#xD;&#xA;and self.current.hasJunction = false"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:ChangeEvent" xmi:id="_X0JG8OmoEe23Ku9-c1Ae_A">
+      <changeExpression xmi:type="uml:LiteralString" xmi:id="_X0JG8emoEe23Ku9-c1Ae_A" value="self.current.laneId &lt;> self.previous.laneId&#xD;&#xA;and self.current.hasJunction = false"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:ChangeEvent" xmi:id="_lPTrkOmoEe23Ku9-c1Ae_A">
+      <changeExpression xmi:type="uml:LiteralString" xmi:id="_lPTrkemoEe23Ku9-c1Ae_A" value="self.current.laneId = self.previous.laneId&#xD;&#xA;and self.current.hasJunction = false"/>
+    </packagedElement>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_m6cd8MPPEeyd3c2n8E7mgg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_m6gvYMPPEeyd3c2n8E7mgg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/1.4/SysML#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="platform:/plugin/org.eclipse.papyrus.sysml14/model/SysML.profile.uml#SysML"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_m-3ZAMPREeyd3c2n8E7mgg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_m-3ZAcPREeyd3c2n8E7mgg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_Kv8EIKFXEeS_KNX0nfvIVQ"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#ActionLanguage"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_trhQ4OsmEeyhoJsUFxKCzg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_acbcEOtOEe2m9_mD3Yjl2w" source="PapyrusVersion">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_acbcEetOEe2m9_mD3Yjl2w" key="Version" value="0.0.13"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_acbcEutOEe2m9_mD3Yjl2w" key="Comment" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_acbcE-tOEe2m9_mD3Yjl2w" key="Copyright" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_acbcFOtOEe2m9_mD3Yjl2w" key="Date" value="2023-05-05"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_acbcFetOEe2m9_mD3Yjl2w" key="Author" value=""/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_trh38OsmEeyhoJsUFxKCzg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="../SysMLEvolver/SysMLEvolver.testing.profile.uml#_Rg_yIOtOEe2Q9rbG-WAokA"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="../SysMLEvolver/SysMLEvolver.testing.profile.uml#_0GGPAOsjEeyhoJsUFxKCzg"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_olynUE35Ee2uLPMlgaj3-w">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_8nSycE7YEe2Qku1UZDx1Ng" source="PapyrusVersion">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_8nSycU7YEe2Qku1UZDx1Ng" key="Version" value="0.0.8"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_8nSyck7YEe2Qku1UZDx1Ng" key="Comment" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_8nSyc07YEe2Qku1UZDx1Ng" key="Copyright" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_8nSydE7YEe2Qku1UZDx1Ng" key="Date" value="2022-10-17"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_8nSydU7YEe2Qku1UZDx1Ng" key="Author" value=""/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_olzOYE35Ee2uLPMlgaj3-w" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="../SysMLEvolver/SysMLEvolver.uncertainty.profile.uml#_k5yZME4FEe2QWOFmN0URjw"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="../SysMLEvolver/SysMLEvolver.uncertainty.profile.uml#_paoBwE3yEe2uLPMlgaj3-w"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_SgE7UNbbEe2SL9imKrrDUg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Sn-TIOmfEe2txuzTIqHZag" source="PapyrusVersion">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Sn-TIemfEe2txuzTIqHZag" key="Version" value="0.0.13"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Sn-TIumfEe2txuzTIqHZag" key="Comment" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Sn-TI-mfEe2txuzTIqHZag" key="Copyright" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Sn-TJOmfEe2txuzTIqHZag" key="Date" value="2023-05-03"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Sn-TJemfEe2txuzTIqHZag" key="Author" value=""/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_SgXPMNbbEe2SL9imKrrDUg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="../Profiles/SysMLEvolver.testing.profile.uml#_G_InwOmfEe2cO5J-3rGa8Q"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="../Profiles/SysMLEvolver.testing.profile.uml#_0GGPAOsjEeyhoJsUFxKCzg"/>
+    </profileApplication>
+  </uml:Model>
+  <Blocks:Block xmi:id="_sP9KEMPPEeyd3c2n8E7mgg" base_Class="_sM_8sMPPEeyd3c2n8E7mgg"/>
+  <testing:StateVariable xmi:id="_Bw6QcANSEe2hnLknIAomAQ" base_Property="_bNm0oMPVEeyd3c2n8E7mgg"/>
+  <testing:CallOperation xmi:id="_yP8CEOEdEe2zlbU1jP9qDw" base_Operation="_SOLNwMPQEeyd3c2n8E7mgg"/>
+  <testing:CallOperation xmi:id="_zhvoMOEdEe2zlbU1jP9qDw" base_Operation="_xRgLEMqjEeyBxZM8hgMRvg"/>
+  <testing:CallOperation xmi:id="_2Cl0UOEdEe2zlbU1jP9qDw" base_Operation="_noWnkOu1EeyOaujmFYHlMw"/>
+  <testing:CallOperation xmi:id="_3TcYMOEdEe2zlbU1jP9qDw" base_Operation="_Da6IgOu2EeyOaujmFYHlMw"/>
+  <testing:StateVariable xmi:id="_O5PHEOkcEe2wA73EzY-VEQ" base_Property="_JYTOEOkcEe2wA73EzY-VEQ"/>
+  <testing:EnvironmentVariable xmi:id="_e41dQOmeEe2krLOgLClFeg" base_Property="_Y7u2YOmCEe2krLOgLClFeg"/>
+  <testing:EnvironmentVariable xmi:id="_gQ7RkOmeEe2krLOgLClFeg" base_Property="_2-WhMOmdEe2krLOgLClFeg"/>
+  <testing:EnvironmentVariable xmi:id="_hcCZ0OmeEe2krLOgLClFeg" base_Property="_7B4BAOmdEe2krLOgLClFeg"/>
+  <testing:EnvironmentVariable xmi:id="_jJgBMOmeEe2krLOgLClFeg" base_Property="_AjHcAOmeEe2krLOgLClFeg"/>
+  <testing:SafetyVariable xmi:id="_ko6lgOmeEe2krLOgLClFeg" base_Property="_PWFhEOmeEe2krLOgLClFeg"/>
+  <testing:SyncOperation xmi:id="_cnK1UOtOEe2m9_mD3Yjl2w" base_Operation="_nL3qcOmeEe2krLOgLClFeg"/>
+</xmi:XMI>
