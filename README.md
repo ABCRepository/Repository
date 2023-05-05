@@ -4,9 +4,9 @@ This repository contains:
 
 **1. REMEDY Tool** -  The REMEDY Tool, which includes ETM-Executor and ETM-Evolver for enabling the execution and evolution of the ETM;
 
-**2. MEDY Profiles** - The MEDY Profiles define two profiles to distinguish three types of variables;
+**2. MEDY Profiles** - The MEDY Profiles define two profiles to distinguish three types of variables and two types of operations;
 
-**3. Running Example** - The Running example with SysML (i.e., a blcok definition diagram and a state machine) to capture behavior of driving through a block;
+**3. Running Example** - The Running example with SysML model(i.e., a blcok definition diagram and a state machine) to capture behavior of driving through a block;
 
 **4. Data Sets** - All the raw data and plots for two experiments.
 
