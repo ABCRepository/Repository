@@ -33,6 +33,3 @@ To construct a ETM (i.e., SysML model) with a block definition diagram and a sta
 
 To see detailed instruction of using APIs for getting corresponing attributes, please look at [CARLA](https://carla.readthedocs.io/en/latest/python_api).
 
-## Demonstration of REMEDY ##
-
-https://github.com/ChaoTan201/REMEDY-Repository/blob/main/Demonstration%20of%20REMEDY/Demonstration%20of%20REMEDY.mp4
