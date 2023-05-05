@@ -11,11 +11,11 @@ This repository contains:
 **4. Data Sets** - All the raw data and plots for two experiments.
 
 ## Contributions ##
-**1** We introduce a novel approach with a tool, named REMEDY, for automatically discovering previously-unknown ADS behaviours and specifying them as state machines.
+**1.** We introduce a novel approach with a tool, named REMEDY, for automatically discovering previously-unknown ADS behaviours and specifying them as state machines.
 
-**2** We implemented three strategies, for REMEDY, all integrated with REMEDY to drive model execution, evolution, and co-simulation.
+**2.** We implemented three strategies, for REMEDY, all integrated with REMEDY to drive model execution, evolution, and co-simulation.
 
-**3** We conducted an empirical evaluation to assess the cost-effectiveness of these three strategies. Results show that the risk-based strategy outperforms the random and
+**3.** We conducted an empirical evaluation to assess the cost-effectiveness of these three strategies. Results show that the risk-based strategy outperforms the random and
 coverage-based strategies in discovering risky ADS behaviours and driving scenarios.
 
 ## Overview of REMEDY ##
