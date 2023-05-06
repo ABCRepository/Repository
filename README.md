@@ -8,7 +8,7 @@ This repository contains:
 
 **3. Running Example** - The Running example with SysML model(i.e., a blcok definition diagram and a state machine) to capture behavior of driving through a block;
 
-**4. Data Sets** - All the raw data and plots for two experiments.
+**4. Data Sets** - All the raw data for two experiments.
 
 ## Contributions ##
 **1.** We introduce a novel approach with a tool, named REMEDY, for automatically discovering previously-unknown ADS behaviours and specifying them as state machines.
