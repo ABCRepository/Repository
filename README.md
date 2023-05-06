@@ -33,6 +33,6 @@ To construct a ETM (i.e., SysML model) with a block definition diagram and a sta
 
 To see detailed instruction of using APIs for getting corresponing attributes, please look at [CARLA](https://carla.readthedocs.io/en/latest/python_api).
 
-## Demostration of Running example ##
+## Demostration of Running example with SysML ##
 ![image](https://github.com/ABCRepository/Repository/blob/main/Running%20example%20SysML%20model/running%20example.png)
 
