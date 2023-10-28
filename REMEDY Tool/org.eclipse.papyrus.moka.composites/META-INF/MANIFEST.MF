@@ -1,0 +1,24 @@
+Manifest-Version: 1.0
+Export-Package: org.eclipse.papyrus.moka.composites,
+ org.eclipse.papyrus.moka.composites.Semantics.Actions.CompleteActions,
+ org.eclipse.papyrus.moka.composites.Semantics.Actions.IntermediateActions,
+ org.eclipse.papyrus.moka.composites.Semantics.Classes.Kernel,
+ org.eclipse.papyrus.moka.composites.Semantics.CommonBehaviors.Communications,
+ org.eclipse.papyrus.moka.composites.Semantics.CompositeStructures.InvocationActions,
+ org.eclipse.papyrus.moka.composites.Semantics.CompositeStructures.StructuredClasses,
+ org.eclipse.papyrus.moka.composites.Semantics.Loci.LociL3
+Bundle-SymbolicName: org.eclipse.papyrus.moka.composites;singleton:=true
+Bundle-Version: 1.1.4.qualifier
+Bundle-Name: Moka Composites Extension (Incubation)
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.uml2.uml;bundle-version="4.0.1",
+ org.eclipse.papyrus.moka.fuml;bundle-version="1.1.4",
+ org.eclipse.papyrus.moka;bundle-version="1.1.4",
+ org.eclipse.debug.core;bundle-version="3.8.0",
+ org.apache.batik.util;bundle-version="1.6.0"
+Bundle-ActivationPolicy: lazy
+Bundle-ManifestVersion: 2
+Bundle-Activator: org.eclipse.papyrus.moka.composites.Activator
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-Vendor: Eclipse Modeling Project

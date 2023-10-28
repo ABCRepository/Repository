@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.papyrus.moka.engine">
+      <engine
+            class="org.eclipse.papyrus.moka.composites.CompositeStructuresExecutionEngine"
+            description="PSCS Execution Engine (single-threaded implementation)"
+      >
+      </engine>
+   </extension>
+	 <extension
+         point="org.eclipse.emf.ecore.uri_mapping">
+      <mapping
+            source="pathmap://PAPYRUS_MOKA_FUML_CS_TYPES/"
+            target="platform:/plugin/org.eclipse.papyrus.moka.composites/resources/">
+      </mapping>
+   </extension>
+   <extension
+         point="org.eclipse.papyrus.uml.extensionpoints.UMLLibrary">
+      <library
+            description="Precise Semantics Of Composites "
+            iconpath="resources/icons/moka_icon.png"
+            name="PreciseSemanticsOfComposites"
+            path="pathmap://PAPYRUS_MOKA_FUML_CS_TYPES/PreciseSemanticsOfComposites.uml"
+            provider="CEA LIST - 2013">
+      </library>
+   </extension>
+</plugin>
