@@ -15,7 +15,7 @@ This repository contains:
 
 **2.** proposed a solution to evolve state machines via model execution and co-simulation constantly.
 
-**3.** implemented risk-based strategy RiOT using Q-learning to drive model execution, model evolution, and co-simulation.
+**3.** Implemented risk-based strategy RiOT using Q-learning to drive model execution, model evolution, and co-simulation.
 
 **4.** conducted an empirical evaluation to assess the cost-effectiveness of the strategy by comparing it with a random strategy (RT) and a coveragebased greedy strategy (COT) – the baselines. Results show
 that RiOT outperforms RT and COT in discovering risky ADS behaviours, while COT performs the best in exploring more diverse behaviours.
@@ -31,12 +31,12 @@ and ETM-Evolver). ETM-Executor is used to execute ETM and ETM-Evolver is used to
 ## REMEDY Environment Configuration ##
 **1. Construct initial ETM model**
 
-To construct a ETM (i.e., SysML model) with a block definition diagram and a state machine diagram, and then apply REDY profiles to the ETM.
+To construct an ETM (i.e., SysML model) with a block definition diagram and a state machine diagram, and then apply REDY profiles to the ETM.
 
-**2. Configurate CARLA setting**
+**2. Configure CARLA setting**
 
-To see detailed instruction of using APIs for getting corresponing attributes, please look at [CARLA](https://carla.readthedocs.io/en/latest/python_api).
+To see detailed instructions for using APIs for getting corresponding attributes of the virtual vehicle and environment and configuring the experiment environment (e.g., add NPC vehicles within predefined regions and set clear weather), please look at [CARLA](https://carla.readthedocs.io/en/latest/python_api).
 
-## Demostration of Running example with SysML ##
+## Demonstration of Running example with SysML ##
 ![image](https://github.com/ABCRepository/Repository/blob/main/Running%20example%20SysML%20model/running%20example.png)
 
