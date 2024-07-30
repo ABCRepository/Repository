@@ -18,7 +18,7 @@ This repository contains:
 **3.** Implemented risk-based strategy RiOT using Q-learning to drive model execution, model evolution, and co-simulation.
 
 **4.** conduct an empirical evaluation to assess the cost-effectiveness of the strategy by comparing it with three comparision baselines, i.e., random strategy
-(RT ) and a coverage-based greedy strategy (COT ), and a start-of-art RL-based approach DeepCollision. Results show
+(RT ), a coverage-based greedy strategy (COT ), and a start-of-art RL-based approach DeepCollision. Results show
 that RiOT outperforms RT and COT in discovering risky ADS behaviours, while COT performs the best in exploring more diverse behaviours.
 
 **5.** implemented REMEDY with the three strategies (i.e., RiOT, COT and RT) and model execution as a prototype.
