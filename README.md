@@ -32,7 +32,7 @@ and ETM-Evolver). ETM-Executor is used to execute ETM and ETM-Evolver is used to
 ## REMEDY Environment Configuration ##
 **1. Construct initial ETM model**
 
-To construct an ETM (i.e., SysML model) with a block definition diagram and a state machine diagram, and then apply REDY profiles to the ETM based on [Papyrus](https://projects.eclipse.org/projects/modeling.mdt.papyrus)
+To construct an ETM (i.e., SysML model) with a block definition diagram and a state machine diagram, and then apply MEDY profiles to the ETM based on [Papyrus](https://projects.eclipse.org/projects/modeling.mdt.papyrus)
 
 **2. Configure CARLA setting**
 
