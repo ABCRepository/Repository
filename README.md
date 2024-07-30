@@ -1,4 +1,4 @@
-# Behaviours Abstraction and Model Evolution in Autonomous Driving via Co-simulation
+# Safety Behaviour Abstraction and Model Evolution in Autonomous Driving
 
 This repository contains:
 
