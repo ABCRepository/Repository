@@ -43,19 +43,8 @@ public class Application implements IApplication {
 	private String instanceArg = "-i ";
 
 	public Object start(IApplicationContext context) throws Exception {
-		for (int i = 0; i < ExecutionParameters.maxEpisodeNum; i++) {
+		executeTestModel();
 
-			loadModel(caseName);
-
-			try {
-				executeTestModel();
-			} catch (CoreException e) {
-				e.printStackTrace();
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
-		}
-		
 		return IApplication.EXIT_OK;
 		
 
@@ -73,28 +62,6 @@ public class Application implements IApplication {
 					workbench.close();
 			}
 		});
-	}
-
-
-	public EObject loadModel(String modelPath) {
-		eObjectToExecute = null;
-		ResourceSet resourceSet = new ResourceSetImpl();
-
-		Resource resource = resourceSet.getResource(URI.createFileURI("model"), true);
-		try {
-			resource.load(null);
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		model = (Model) EcoreUtil.getObjectByType(resource.getContents(), UMLPackage.Literals.MODEL);
-		EList<Element> elements = model.allOwnedElements();
-		for (Element e : elements) {
-			if (e instanceof Class) {
-				Class clazz = (Class) e;
-					eObjectToExecute = clazz;
-				}
-		}
-		return eObjectToExecute;
 	}
 
 	private void executeTestModel() throws CoreException, IOException {
