@@ -43,13 +43,10 @@ public class Application implements IApplication {
 	private String instanceArg = "-i ";
 
 	public Object start(IApplicationContext context) throws Exception {
-		executeTestModel();
-
 		return IApplication.EXIT_OK;
 		
 
 	}
-
 
 	public void stop() {
 		if (!PlatformUI.isWorkbenchRunning())
@@ -64,23 +61,7 @@ public class Application implements IApplication {
 		});
 	}
 
-	private void executeTestModel() throws CoreException, IOException {
-		ExecutionEngine engine = new ExecutionEngine();
-
-		String[] args = { instanceArg };
-		int requestPort = -1;
-		int replyPort = -1;
-		int eventPort = -1;
-		requestPort = findFreePort();
-		eventPort = findFreePort();
-		replyPort = findFreePort();
-		MokaDebugTarget target = new MokaDebugTarget(null, null);
-		engine.init(eObjectToExecute, args, target, requestPort, replyPort, eventPort);
-		engine.start();
-
-
-	}
-
+	
 	protected static int findFreePort() {
 		ServerSocket socket = null;
 		try {
