@@ -27,7 +27,7 @@ that RiOT outperforms RT and COT in discovering risky ADS behaviours, while COT 
 An overview of REMEDY is shown here. REMEDY aims to execute executable test models (in SysML state machines) deployed on SysML-based modelling and model execution environment Papyrus and
 Moka, and the virtual vehicle deployed on a simulator (in our case, CARLA) to evolve test models for discovering previously-unknown behaviours. REMEDY is equiped with two components (i.e., ETM-Executor
 and ETM-Evolver). ETM-Executor is used to execute ETM and ETM-Evolver is used to evolve ETM.
-![image](https://github.com/ABCRepository/Repository/blob/main/Overview%20of%20REMEDY/overview%20of%20framework.png)
+![image](https://github.com/ABCRepository/Repository/blob/main/Overview%20of%20REMEDY/overview%20of%20framework1.png)
 
 ## REMEDY Environment Configuration ##
 **1. Construct initial ETM model**
