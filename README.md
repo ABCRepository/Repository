@@ -2,7 +2,7 @@
 
 This repository contains:
 
-**1. REMEDY Tool** -  The REMEDY Tool, which includes ETM-Executor (related to SysMLEvolverExecutor.java)  and ETM-Evolver (related to DiagramUpdaterUtil.java) for enabling the execution and evolution of the ETM;
+**1. REMEDY Tool** -  The REMEDY Tool, which includes ETM-Executor and ETM-Evolver for enabling the execution and evolution of the ETM;
 
 **2. MEDY Profiles** - The MEDY Profiles define three profiles to distinguish three types of variables, two types of operations, and three behaviors;
 
