@@ -33,11 +33,11 @@ and ETM-Evolver). ETM-Executor is used to execute ETM and ETM-Evolver is used to
 ## REMEDY Environment Configuration ##
 **1. Construct initial ETM model**
 
-To construct an ETM (i.e., SysML model) with a block definition diagram and a state machine diagram, and then apply MEDY profiles to the ETM based on [Papyrus](https://projects.eclipse.org/projects/modeling.mdt.papyrus)
+To construct an ETM (i.e., executable test model) using a SysML model, begin by building a block definition diagram and a state machine diagram, and then apply MEDY profiles to the ETM based on [Papyrus](https://projects.eclipse.org/projects/modeling.mdt.papyrus)
 
 **2. Configure CARLA setting**
 
-To see detailed instructions for using APIs for getting corresponding attributes of the virtual vehicle and environment and configuring the experiment environment (e.g., add NPC vehicles within predefined regions and set clear weather), please look at [CARLA](https://carla.readthedocs.io/en/latest/python_api).
+Using APIs for getting corresponding attributes of the virtual vehicle and environment and configuring the experiment environment (e.g., add NPC vehicles within predefined regions and set clear weather), the detailed instructions please look at [CARLA](https://carla.readthedocs.io/en/latest/python_api).
 
 ## Demonstration of Running example with SysML ##
 ![image](https://github.com/ABCRepository/Repository/blob/main/Running%20example%20SysML%20model/running%20example.png)
