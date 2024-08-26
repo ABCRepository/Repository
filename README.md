@@ -22,7 +22,7 @@ This repository contains:
 that RiOT significantly outperforms COT and RT in discovering risky behaviours and COT performs the best in generating diverse scenarios. Moreover, REMEDY with RiOT can generate scenarios that lead to
 a collision earlier, have higher overall collision velocity, and are more diverse, as compared with DeepCollision.
 
-**5.** implemented REMEDY with the three strategies (i.e., RiOT, COT and RT) and model execution as a prototype.
+**5.** implemented REMEDY with the three strategies (i.e., RiOT, COT and RT) that support model execution and evolution as a prototype.
 
 ## Overview of REMEDY ##
 An overview of REMEDY is shown here. REMEDY aims to execute executable test models (in SysML state machines) deployed on SysML-based modelling and model execution environment Papyrus and
