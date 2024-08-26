@@ -37,7 +37,7 @@ To construct an ETM (i.e., executable test model) using a SysML model, begin by 
 
 **2. Configure CARLA setting**
 
-Using APIs for getting corresponding attributes of the virtual vehicle and environment (e.g., speed), controlling the execution of the virtual vehicle (e.g. turnLeft), and configuring the dynamic experiment environment (e.g., adding NPC vehicles around the virtual vehicle and setting clear weather), the detailed instructions please look at [CARLA](https://carla.readthedocs.io/en/latest/python_api).
+Using APIs for getting corresponding attributes of the virtual vehicle and environment (e.g., speed), controlling the execution of the virtual vehicle (e.g. turnLeft), and configuring the dynamic driving environment (e.g., adding NPC vehicles around the virtual vehicle and setting clear weather), the detailed instructions please look at [CARLA](https://carla.readthedocs.io/en/latest/python_api).
 
 ## Demonstration of Running example with SysML ##
 ![image](https://github.com/ABCRepository/Repository/blob/main/Running%20example%20SysML%20model/running%20example.png)
