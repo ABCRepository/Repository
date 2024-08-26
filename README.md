@@ -2,27 +2,27 @@
 
 This repository contains:
 
-**1. REMEDY Tool** -  The REMEDY Tool, which includes ETM-Executor and ETM-Evolver for enabling the execution and evolution of the ETM;
+**1. REMEDY Tool** -  The REMEDY Tool, which includes ETM-Executor and ETM-Evolver for enabling the execution and evolution of the ETMs;
 
-**2. MEDY Profile** - The MEDY Profile define three profiles to distinguish three types of variables, two types of operations, and three behaviours;
+**2. MEDY Profile** - The MEDY Profile defines three profiles to distinguish three types of variables, two types of operations, and three behaviours;
 
 **3. Running Example** - The Running example with a SysML model, including a block definition diagram and a state machine, to capture the behaviour of driving through a block;
 
 **4. Data Sets** - All the raw data for two experiments.
 
 ## Contributions ##
-**1.** proposed a novel approach (REMEDY) for automatically discovering previously unknown ADS behaviours and specifying them as executable state machines.
+**1.** propose a novel approach (REMEDY) for automatically discovering previously unknown ADS behaviours and specifying them as executable state machines.
 
-**2.** proposed a solution to evolve state machines via model execution and co-simulation constantly.
+**2.** propose a solution to evolve state machines via model execution and co-simulation constantly.
 
-**3.** Implemented risk-based strategy RiOT using Q-learning to drive model execution, model evolution, and co-simulation.
+**3.** Implement risk-based strategy RiOT using Q-learning to drive model execution, model evolution, and co-simulation.
 
 **4.** conduct an empirical evaluation to assess the cost-effectiveness of the strategy by comparing it with three comparision baselines, i.e., random strategy
 (RT), a coverage-based greedy strategy (COT), and a start-of-art RL-based approach DeepCollision.  Results show that RiOT outperforms RT and COT in dis-
 covering risky ADS behaviours, while COT performs the best in exploring more diverse behaviours. Regarding behavious diversity, COT achieved the
 best performance, RiOT performed the worst, and REMEDY outperforms DeepCollision.
 
-**5.** implemented REMEDY with the three strategies (i.e., RiOT, COT, and RT) that support model execution and evolution as a prototype.
+**5.** implement REMEDY with the three strategies (i.e., RiOT, COT, and RT) that support model execution and evolution as a prototype.
 
 ## Overview of REMEDY ##
 An overview of REMEDY is shown here. REMEDY aims to execute executable test models (in SysML state machines) deployed on SysML-based modelling and model execution environment Papyrus and
