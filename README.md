@@ -19,7 +19,8 @@ This repository contains:
 
 **4.** conduct an empirical evaluation to assess the cost-effectiveness of the strategy by comparing it with three comparision baselines, i.e., random strategy
 (RT ), a coverage-based greedy strategy (COT ), and a start-of-art RL-based approach DeepCollision. Results show
-that RiOT outperforms RT and COT in discovering risky ADS behaviours, while COT performs the best in exploring more diverse behaviours.
+that RiOT significantly outperforms COT and RT in discovering risky behaviours and COT performs the best in generating diverse scenarios. Moreover, REMEDY with RiOT can generate scenarios that lead to
+a collision earlier, have higher overall collision velocity, and are more diverse, as compared with DeepCollision.
 
 **5.** implemented REMEDY with the three strategies (i.e., RiOT, COT and RT) and model execution as a prototype.
 
