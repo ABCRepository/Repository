@@ -11,7 +11,7 @@ This repository contains:
 **4. Data Sets** - All the raw data for two experiments.
 
 ## Contributions ##
-**1.** propose a novel approach (REMEDY) for automatically discovering previously unknown ADS behaviours and specifying them as executable state machines.
+**1.** propose a novel approach (REMEDY) for automatically discovering previously unknown ADS behaviours and specifying them as executable state machines constructed with MEDY.
 
 **2.** propose a solution to evolve state machines via model execution and co-simulation constantly.
 
