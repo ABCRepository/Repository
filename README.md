@@ -18,11 +18,11 @@ This repository contains:
 **3.** Implemented risk-based strategy RiOT using Q-learning to drive model execution, model evolution, and co-simulation.
 
 **4.** conduct an empirical evaluation to assess the cost-effectiveness of the strategy by comparing it with three comparision baselines, i.e., random strategy
-(RT ), a coverage-based greedy strategy (COT ), and a start-of-art RL-based approach DeepCollision. Results show
-that RiOT significantly outperforms COT and RT in discovering risky behaviours and COT performs the best in generating diverse scenarios. Moreover, REMEDY with RiOT can generate scenarios that lead to
-a collision earlier, have higher overall collision velocity, and are more diverse, as compared with DeepCollision.
+(RT ), a coverage-based greedy strategy (COT ), and a start-of-art RL-based approach DeepCollision.  Results show that RiOT outperforms RT and COT in dis-
+covering risky ADS behaviours, while COT performs the best in exploring more diverse behaviours. Regarding behavious diversity, COT achieved the
+best performance, RiOT performed the worst, and REMEDY outperforms DeepCollision.
 
-**5.** implemented REMEDY with the three strategies (i.e., RiOT, COT and RT) that support model execution and evolution as a prototype.
+**5.** implemented REMEDY with the three strategies (i.e., RiOT, COT, and RT) that support model execution and evolution as a prototype.
 
 ## Overview of REMEDY ##
 An overview of REMEDY is shown here. REMEDY aims to execute executable test models (in SysML state machines) deployed on SysML-based modelling and model execution environment Papyrus and
