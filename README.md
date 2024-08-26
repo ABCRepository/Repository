@@ -15,7 +15,7 @@ This repository contains:
 
 **2.** propose a solution to evolve state machines via model execution and simulation.
 
-**3.** Implement risk-based strategy RiOT using Q-learning to drive model execution, model evolution, and co-simulation.
+**3.** Implement risk-based strategy RiOT using Q-learning to drive model execution, model evolution, and simulation.
 
 **4.** conduct an empirical evaluation to assess the cost-effectiveness of the strategy by comparing it with three comparision baselines, i.e., random strategy
 (RT), a coverage-based greedy strategy (COT), and a start-of-art RL-based approach DeepCollision.  Results show that RiOT outperforms RT and COT in dis-
