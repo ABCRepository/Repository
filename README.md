@@ -13,7 +13,7 @@ This repository contains:
 ## Contributions ##
 **1.** propose a novel approach (REMEDY) for automatically discovering previously unknown ADS behaviours and specifying them as executable state machines constructed with MEDY.
 
-**2.** propose a solution to evolve state machines via model execution and co-simulation constantly.
+**2.** propose a solution to evolve state machines via model execution and simulation.
 
 **3.** Implement risk-based strategy RiOT using Q-learning to drive model execution, model evolution, and co-simulation.
 
