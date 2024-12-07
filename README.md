@@ -39,6 +39,9 @@ To construct an ETM (i.e., executable test model) using a SysML model, begin by 
 
 Using APIs for getting corresponding attributes of the virtual vehicle and environment (e.g., speed), controlling the execution of the virtual vehicle (e.g. turnLeft), and configuring the dynamic driving environment (e.g., adding NPC vehicles around the virtual vehicle and setting clear weather), the detailed instructions please look at [CARLA](https://carla.readthedocs.io/en/latest/python_api).
 
+**3. Explore ADS behaviors with Q-Learning**
+Using Q-Learning to explore ADS behaviors with high risk, this study primarily defines risky behaviors with a focus on collisions and potential collisions, including violations of safety margins. More details of Hyperparameters of Q-Learning used in Behaviour Explorer can be accessed here [hyperparameter setting](https://github.com/ABCRepository/Repository/blob/main/Hyperparameters/hyperparameters.png).
+
 ## Demonstration of Running example with SysML ##
 ![image](https://github.com/ABCRepository/Repository/blob/main/Running%20example%20SysML%20model/running%20example.png)
 
