@@ -56,13 +56,6 @@ public class ExecutionEngine extends FUMLAsyncExecutionEngine {
 
 	}
 
-	@Override
-	public ControlDelegate getControlDelegate() {
-		if (this.controlDelegate == null) {
-			this.controlDelegate = new TestControlDelegate(this);
-		}
-		return this.controlDelegate;
-	}
 
 	
 }
