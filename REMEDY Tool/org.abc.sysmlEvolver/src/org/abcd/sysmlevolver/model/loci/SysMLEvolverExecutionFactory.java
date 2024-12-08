@@ -62,11 +62,6 @@ public class SysMLEvolverExecutionFactory extends SM_ExecutionFactory {
 			SemanticVisitor visitor = null ;
 			if (element instanceof Transition) {
 				Transition transition = (Transition) element;
-				switch(transition.getKind()){
-					case EXTERNAL_LITERAL: visitor = new SysMLEvolverExternalTransitionActivation(); break;
-					case INTERNAL_LITERAL: visitor = new SysMLEvolverInternalTransitionActivation(); break;
-					case LOCAL_LITERAL: visitor = new SysMLEvolverLocalTransitionActivation(); break;
-				}
 			}
 			else if (element instanceof State) {
 				if(element instanceof FinalState){
