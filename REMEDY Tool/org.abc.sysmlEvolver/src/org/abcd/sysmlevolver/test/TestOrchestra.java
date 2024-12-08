@@ -33,28 +33,6 @@ public class TestOrchestra {
 
 	
 
-
-	private void updateStateVariableValues() {
-		boolean ret = monitor.update();
-		if (!ret) {
-			System.err.println("monitor.update() failed");
-			TestLogger.log("!!! monitor.update() failed\n");
-		}
-		driver.notifyAllObjectActivations();
-	}
-
-
-	private void triggerChangeEvents() {
-		if (ExecutionParameters.simulating) {
-			monitor.evaluateChangeEvents();
-
-		} else {
-			monitor.evaluateChangeEvents();
-			driver.waitUntilAllObjectsStable();
-		}
-
-	}
-
 	private double checkInvariants(boolean newTriggerGenerated) {
 
 		if (ExecutionParameters.logPerformance) {
@@ -79,9 +57,6 @@ public class TestOrchestra {
 			long stepStartTime = System.nanoTime();
 			driver.waitUntilAllObjectsStable();
 
-			boolean newTriggerGenerated = driver.nextEpoch(risk);
-			updateStateVariableValues(); // 350ms
-			triggerChangeEvents();
 			try {
 				Thread.sleep(500);
 			} catch (InterruptedException e) {
