@@ -36,11 +36,6 @@ public class ExecutionEngine extends FUMLAsyncExecutionEngine {
 		if (behavior != null) {
 			main = behavior;
 
-			// creates the locus, executor and execution factory
-			this.locus = new SysMLEvolverLocus();
-			locus.setExecutor(new SysMLEvolverExecutor());
-			locus.setFactory(new SysMLEvolverExecutionFactory());
-
 			// initializes built-in primitive types
 			this.initializeBuiltInPrimitiveTypes(locus);
 
@@ -56,10 +51,7 @@ public class ExecutionEngine extends FUMLAsyncExecutionEngine {
 			// Initializes arguments
 			this.initializeArguments(this.args);
 
-			// Finally launches the execution
-			this.started = true;
-
-			locus.executor.start((Class) main.getContext(), arguments);
+			
 		}
 
 	}
