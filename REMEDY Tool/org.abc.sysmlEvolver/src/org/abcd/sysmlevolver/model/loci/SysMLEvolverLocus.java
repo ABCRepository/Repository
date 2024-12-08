@@ -23,7 +23,6 @@ public class SysMLEvolverLocus extends SM_Locus{
 			object.types.add(type);
 			object.createFeatureValues();
 			
-			((ActiveObject)object).createOperationExecutions();
 			this.add(object);
 		}
 		return object;
