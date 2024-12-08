@@ -40,7 +40,6 @@ public class SUTSyncActionActivation extends ActionActivation {
 			List<Value> values = this.takeTokens(inputPin);
 			assert (values.size() == 1);
 			String value = values.get(0).specify().stringValue();
-			cmd = cmd.replace("$" + name, value);
 		}
 
 
