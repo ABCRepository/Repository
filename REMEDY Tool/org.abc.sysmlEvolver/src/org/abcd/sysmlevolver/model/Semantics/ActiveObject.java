@@ -55,10 +55,6 @@ public class ActiveObject extends SM_Object{
 			}
 		}
 		
-		if (this.objectActivation == null) {
-			this.objectActivation = new ActiveObjectActivation(classifier, inputs);
-			this.objectActivation.object = this;
-		}
 		/* 1. Create Thread Name */
 		String threadName = "Thread_";
 		Iterator<Class> classes = this.types.iterator();
