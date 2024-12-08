@@ -22,10 +22,6 @@ public class SysMLEvolverExecutor extends CS_Executor {
 		((TestControlDelegate) FUMLExecutionEngine.eInstance.getControlDelegate()).clear();
 
 
-		locus.extensionalValues.clear();
-
-		Object_ object = this.locus.instantiate(type);
-		object.startBehavior(type, inputs);
 
 
 		Reference reference;
