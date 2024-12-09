@@ -281,10 +281,7 @@ public class DiagramUpdater extends QLearningTester {
 							ExecutionParameters.numsOfEvolvedTransitionofCall++;
 							long beginTime = System.nanoTime();
 
-							DiagramUpdaterUtil diagramUpdaterUtil = new DiagramUpdaterUtil();
-
-							diagramUpdaterUtil.evolutionTransitionOnCall(curStateOwningRegionName, curStateName,
-									bestOperation, guard, targetStateName);
+							
 
 
 
@@ -337,10 +334,7 @@ public class DiagramUpdater extends QLearningTester {
 								targetStateConstraint = "right > 0 and right < 1 and brake > 0 and brake < 1";
 							} //
 
-							DiagramUpdaterUtil diagramUpdaterUtil = new DiagramUpdaterUtil();
-
-							diagramUpdaterUtil.evolutionStateAndTransitionOnCall(curStateOwningRegionName, curStateName,
-									guardconstraint, methodName, newTargetStateName, targetStateConstraint);
+							
 
 
 							long stopTime = System.nanoTime();
@@ -384,19 +378,17 @@ public class DiagramUpdater extends QLearningTester {
 
 							long beginTime = System.nanoTime();// ns
 
-							DiagramUpdaterUtil diagramUpdaterUtil = new DiagramUpdaterUtil();
+							
 							String topRegionName = topRegion.getNode().getName();
-							DiagramUpdater updater = new DiagramUpdater();
-							String changeExpressionName = updater.StringToConstraint(msg);
+							
+							
 
 							isExistingOfChangeEvent = false;
-							matchExistingChangeBasedOnRoot(changeExpressionName);
-
+							
 
 							if (!isExistingOfChangeEvent) {
 
-								diagramUpdaterUtil.evolutionTransitionOnChange(topRegionName, currentStateName,
-										changeExpressionName, targetStateName);
+								
 								
 
 								ActiveObjectActivation currentActivation = getActiveObjectActivation(
@@ -417,10 +409,10 @@ public class DiagramUpdater extends QLearningTester {
 						if (isNewState == true) {
 							long beginTime = System.nanoTime();
 
-							DiagramUpdater updater = new DiagramUpdater();
-							String constraint = updater.StringToConstraint(msg);
+							
+							String constraint = "";
 							String changeExpressionName = constraint;
-							DiagramUpdaterUtil diagramUpdaterUtil = new DiagramUpdaterUtil();
+							
 							String topRegionName = topRegion.getNode().getName();
 							targetStateName = topRegionName + "" + RandomKeyUtil.getPid();
 							String initStateName = "initial " + RandomKeyUtil.getPid();
@@ -428,9 +420,7 @@ public class DiagramUpdater extends QLearningTester {
 							String targetStateRegionName = "Region " + RandomKeyUtil.getPid();
 
 
-							diagramUpdaterUtil.evolutionStateAndTransitionOnChange(topRegionName, currentStateName,
-									constraint, changeExpressionName, targetStateName, initStateName, idleStateName,
-									targetStateRegionName);
+							
 
 
 							long stopTime = System.nanoTime();
@@ -586,65 +576,7 @@ public class DiagramUpdater extends QLearningTester {
 		return constraint;
 	}
 
-	public String StringToConstraint(String msg) {
-		String[] pairs = msg.split(";");
-		String returnString = "";
-		String curLaneId_Temp = null;
-		String nextLaneId_Temp = null;
-		for (String pair : pairs) {
-			String[] key_value = pair.split(":");
-			if (key_value.length < 2) {
-				continue;
-			}
-			if (key_value[0].trim().equals("isObstacle")) {
-				if (key_value[1].trim().equals("1")) {
-					returnString += key_value[0].trim();
-					returnString += " = ";
-					returnString += "true";
-					returnString += " and ";
-				} //
-				else {
-					returnString += key_value[0].trim();
-					returnString += " = ";
-					returnString += "false";
-					returnString += " and ";
-				}
-
-			} //
-			else if (key_value[0].trim().equals("isJunction")) {
-				if (key_value[1].trim().equals("1")) {
-					returnString += key_value[0].trim();
-					returnString += " = ";
-					returnString += "true";
-					returnString += " and ";
-				} //
-				else {
-					returnString += key_value[0].trim();
-					returnString += " = ";
-					returnString += "false";
-					returnString += " and ";
-				}
-
-			} //
-			else if (key_value[0].trim().equals("curLaneId")) {
-				curLaneId_Temp = key_value[1].trim();
-			} //
-			else if (key_value[0].trim().equals("nextLaneId")) {
-
-				nextLaneId_Temp = key_value[1].trim();
-			}
-
-		}
-		if (curLaneId_Temp.equals(nextLaneId_Temp)) {
-			returnString += "curLaneId = nextLaneId";
-			returnString += " and ";
-		} //
-		else {
-			returnString += "curLaneId <> nextLaneId";
-			returnString += " and ";
-		}
-		return returnString.substring(0, returnString.length() - 5);
-	}
+	
 
 	
 }
