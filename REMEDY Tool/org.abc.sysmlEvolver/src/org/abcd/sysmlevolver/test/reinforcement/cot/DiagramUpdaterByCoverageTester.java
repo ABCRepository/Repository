@@ -115,7 +115,7 @@ public class DiagramUpdaterByCoverageTester extends DiagramUpdater {
 					Constraint guard = valueSpecificationToConstraint(specification);
 					List<ParameterValue> lastTestInputs = TestInputGenerator.instance().generateTestInput(guard,
 							bestOperation.getOwnedParameters());
-					String msg = sendAndReceiveMsg(lastTestInputs);
+					String msg = "";
 
 					VertexActivation stateActivation = currentStateconfiguration.getVertexActivation();
 					String curStateName = stateActivation.getNode().getName();
