@@ -173,9 +173,7 @@ public class DiagramUpdaterByRandomTester extends DiagramUpdater {
 
 							long beginTime = System.nanoTime();
 
-							DiagramUpdaterUtil diagramUpdaterUtil = new DiagramUpdaterUtil();
-							diagramUpdaterUtil.evolutionTransitionOnCall(curStateOwningRegionName, curStateName,
-									bestOperation, guard, targetStateName);
+
 
 
 							long stopTime = System.nanoTime();
@@ -227,11 +225,7 @@ public class DiagramUpdaterByRandomTester extends DiagramUpdater {
 								targetStateConstraint = "right > 0 and right < 1 and brake > 0 and brake < 1";
 							} //
 
-							DiagramUpdaterUtil diagramUpdaterUtil = new DiagramUpdaterUtil();
-
-
-							diagramUpdaterUtil.evolutionStateAndTransitionOnCall(curStateOwningRegionName, curStateName,
-									guardconstraint, methodName, newTargetStateName, targetStateConstraint);
+						
 
 
 
@@ -295,16 +289,13 @@ public class DiagramUpdaterByRandomTester extends DiagramUpdater {
 							DiagramUpdater updater = new DiagramUpdater();
 							String constraint = updater.StringToConstraint(msg);
 							String changeExpressionName = constraint;
-							DiagramUpdaterUtil diagramUpdaterUtil = new DiagramUpdaterUtil();
 							String topRegionName = topRegion.getNode().getName();
 							targetStateName = topRegionName + "" + RandomKeyUtil.getPid();
 							String initStateName = RandomKeyUtil.getPid();
 							String idleStateName = RandomKeyUtil.getPid();
 							String targetStateRegionName = RandomKeyUtil.getPid();
 
-							diagramUpdaterUtil.evolutionStateAndTransitionOnChange(topRegionName, currentStateName,
-									constraint, changeExpressionName, targetStateName, initStateName, idleStateName,
-									targetStateRegionName);
+							
 
 
 							long stopTime = System.nanoTime();
