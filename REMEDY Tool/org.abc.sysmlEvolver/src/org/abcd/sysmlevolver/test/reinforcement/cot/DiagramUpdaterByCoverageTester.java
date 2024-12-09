@@ -218,12 +218,7 @@ public class DiagramUpdaterByCoverageTester extends DiagramUpdater {
 								targetStateConstraint = "right > 0 and right < 1 and brake > 0 and brake < 1";
 							} //
 
-							DiagramUpdaterUtil diagramUpdaterUtil = new DiagramUpdaterUtil();
-
 							
-
-							diagramUpdaterUtil.evolutionStateAndTransitionOnCall(curStateOwningRegionName, curStateName,
-									guardconstraint, methodName, newTargetStateName, targetStateConstraint);
 
 
 
@@ -269,7 +264,7 @@ public class DiagramUpdaterByCoverageTester extends DiagramUpdater {
 
 							long beginTime = System.nanoTime();// ns
 
-							DiagramUpdaterUtil diagramUpdaterUtil = new DiagramUpdaterUtil();
+							
 							String topRegionName = topRegion.getNode().getName();
 							DiagramUpdater updater = new DiagramUpdater();
 							String changeExpressionName = updater.StringToConstraint(msg);
@@ -280,8 +275,7 @@ public class DiagramUpdaterByCoverageTester extends DiagramUpdater {
 
 							if (!isExistingOfChangeEvent) {
 
-								diagramUpdaterUtil.evolutionTransitionOnChange(topRegionName, currentStateName,
-										changeExpressionName, targetStateName);
+								
 
 								ActiveObjectActivation currentActivation = getActiveObjectActivation(
 										changeExpressionName);
@@ -312,9 +306,7 @@ public class DiagramUpdaterByCoverageTester extends DiagramUpdater {
 							String targetStateRegionName = RandomKeyUtil.getPid();
 
 
-							diagramUpdaterUtil.evolutionStateAndTransitionOnChange(topRegionName, currentStateName,
-									constraint, changeExpressionName, targetStateName, initStateName, idleStateName,
-									targetStateRegionName);
+							
 
 
 							long stopTime = System.nanoTime();
