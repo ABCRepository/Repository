@@ -165,11 +165,7 @@ public class DiagramUpdaterByCoverageTester extends DiagramUpdater {
 
 							long beginTime = System.nanoTime();
 
-							DiagramUpdaterUtil diagramUpdaterUtil = new DiagramUpdaterUtil();
-
-							diagramUpdaterUtil.evolutionTransitionOnCall(curStateOwningRegionName, curStateName,
-									bestOperation, guard, targetStateName);
-
+							
 
 							long stopTime = System.nanoTime();
 
@@ -266,8 +262,8 @@ public class DiagramUpdaterByCoverageTester extends DiagramUpdater {
 
 							
 							String topRegionName = topRegion.getNode().getName();
-							DiagramUpdater updater = new DiagramUpdater();
-							String changeExpressionName = updater.StringToConstraint(msg);
+							
+							String changeExpressionName = msg;
 
 							isExistingOfChangeEvent = false;
 							matchExistingChangeBasedOnRoot(changeExpressionName);
@@ -295,10 +291,10 @@ public class DiagramUpdaterByCoverageTester extends DiagramUpdater {
 
 							long beginTime = System.nanoTime();
 
-							DiagramUpdater updater = new DiagramUpdater();
-							String constraint = updater.StringToConstraint(msg);
+							
+							String constraint = msg;
 							String changeExpressionName = constraint;
-							DiagramUpdaterUtil diagramUpdaterUtil = new DiagramUpdaterUtil();
+							
 							String topRegionName = topRegion.getNode().getName();
 							targetStateName = topRegionName + "" + RandomKeyUtil.getPid();
 							String initStateName = RandomKeyUtil.getPid();
