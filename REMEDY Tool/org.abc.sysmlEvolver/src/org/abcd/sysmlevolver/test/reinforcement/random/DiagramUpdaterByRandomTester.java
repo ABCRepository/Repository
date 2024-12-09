@@ -9,7 +9,6 @@ import org.abc.constraint.ConstraintInstance;
 import org.abc.constraint.ConstraintInstanceFactory;
 import org.abcd.sysmlevolver.ExecutionParameters;
 import org.abcd.sysmlevolver.evolution.updater.DiagramUpdater;
-import org.abcd.sysmlevolver.evolution.updater.DiagramUpdaterUtil;
 import org.abcd.sysmlevolver.evolution.updater.euml.RandomKeyUtil;
 import org.abcd.sysmlevolver.model.Semantics.ActiveObject;
 import org.abcd.sysmlevolver.model.Semantics.SysMLEvolverStateActivation;
