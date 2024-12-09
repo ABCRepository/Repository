@@ -270,8 +270,8 @@ public class DiagramUpdaterByRandomTester extends DiagramUpdater {
 
 							long beginTime = System.nanoTime();// ns
 
-							DiagramUpdater updater = new DiagramUpdater();
-							String changeExpressionName = updater.StringToConstraint(msg);
+							
+							String changeExpressionName = msg;
 
 							isExistingOfChangeEvent = false;
 							matchExistingChangeBasedOnRoot(changeExpressionName);
@@ -286,8 +286,8 @@ public class DiagramUpdaterByRandomTester extends DiagramUpdater {
 
 							long beginTime = System.nanoTime();
 
-							DiagramUpdater updater = new DiagramUpdater();
-							String constraint = updater.StringToConstraint(msg);
+							
+							String constraint = msg;
 							String changeExpressionName = constraint;
 							String topRegionName = topRegion.getNode().getName();
 							targetStateName = topRegionName + "" + RandomKeyUtil.getPid();
